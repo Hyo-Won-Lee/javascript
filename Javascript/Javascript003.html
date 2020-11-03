@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="niewport" content="width=device-width, initial-scale1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script>
+            //불연산자
+            //연산결과가 true false값을 가지는 연산자
+            document.write(52>273,"<br>");//false
+            document.write(52<273,"<br>");//true
+            document.write(52==273,"<br>");//false
+            document.write(52!=273,"<br>");//true
+           
+            document.write(true>false,"<br>");//true
+            document.write(30>20>10,"<br>");//false
+            document.write(10=="10","<br>");//true
+            document.write(10==10,"<br>");//true
+            //== 값비교. === 자료형 까지 비교
+            document.write(10===10,"<br>");//true
+            document.write(10!==10,"<br>");//false
+            document.write(10==="10","<br>");//false
+            //==우선순위가 낮다.
+            document.write(30>20==1,"<br>");//true
+            document.write(1==30>20,"<br>");//true
+
+            document.write(false||true,"<br>");//true가 하나만 있어도 or연산자
+            document.write(false&&true,"<br>");//둘 다 true일때 and연산자
+            
+            document.write(false||alert('hi1'),"<br>");
+            document.write(true||alert('hi2'),"<br>");
+            
+            document.write(true||false&&true,"<br>");//||, &&
+            document.write(true||(false&&true),"<br>");//괄호를 사용하면 먼저 계산된다.
+            
+            document.write("----------<br>");
+            document.write(''==false,"<br>");
+            document.write(''===false,"<br>");
+            document.write(0==false,"<br>");
+            document.write(0===false,"<br>");
+            document.write(null==undefined,"<br>");
+            document.write(null===undefined,"<br>");
+            // 산술연산자 + - / * %
+            // ? : ;
+            var a;
+            a=(10<23)?5:10;
+            document.write(a,"<br>");
+            document.write("a"+1+1,"<br>");//a11
+            document.write(1+1+"a","<br>");//2a
+
+            var a=1;
+            document.write(a++,"<br>");//1
+            document.write(++a,"<br>");//3
+            document.write(a,"<br>");//3
+
+            a=1;
+            document.write(a++ + a++,"<br>");//3
+
+            a=1;
+            document.write(++a + ++a,"<br>");//5
+
+            a=1;
+            document.write(a++ + a,"<br>");//3
+
+
+
+
+
+
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

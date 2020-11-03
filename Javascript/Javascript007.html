@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var str="";
+        var imgName="on.jpg";
+        str="<img src='"+imgName+"' />"
+        document.write(str);
+
+        var str="<table border=1>";
+        str+="<tr><td></td><td></td></td></tr>";
+        str+="<tr><td></td><td></td></td></tr>";
+        str+="<tr><td></td><td></td></td></tr>";
+        str+="</table>";
+        document.write(str);
+
+
+        document.write('안녕',"<br>");
+
+        
+        for(var i=0;i<5;i++){
+            document.write('안녕'+i,"<br>");
+        }
+        
+        for(var j=0;j<5;j++){
+            document.write('회수'+(j+1),"<br>")
+            for(var i=0;i<5;i++){
+                document.write('안녕'+i,"<br>");
+                document.write(j+':'+i,"<br>");
+            }
+        }
+
+
+
+    
+        //구구단 출력
+        var num=0;
+        for(var i=1;i<10;i++){
+            for(var j=1;j<10;j++){
+                num=i*j;
+                document.write(j+'x'+i+'='+num);
+                document.write("<br>");
+            }
+            document.write("<br>");
+        }
+
+
+    
+        
+        //tr, td 갯수를 입력받아 테이블을 만들어 보자
+        var i=prompt("행의 갯수");
+        var j=prompt("열의 갯수");
+        var count=1;
+        var str="<table border=1>";
+        for(var k=0;k<i;k++){ 
+                str+="<tr>";
+                for(var l=0;l<j;l++){
+                    str+="<td>"+ count++ +"</td>";
+                }
+                str+="</tr>";
+        }
+        str+="</table>";
+        document.write(str);
+
+
+        
+        //tr, td 갯수를 입력받아 테이블을 만들어 보자
+        var i=prompt("행의 갯수");
+        var j=prompt("열의 갯수");
+        //var count=1;
+        var str="<table border=1>";
+        for(var k=0;k<i;k++){ 
+                str+="<tr>";
+                for(var l=0;l<j;l++){
+                    str+="<td>"+ (k*i+l+1) +"</td>";
+                }
+                str+="</tr>";
+        }
+        str+="</table>";
+        document.write(str);
+
+
+
+        
+        //구구단을 테이블에 넣어서 출력
+
+        var str="<table border=1>";
+        str+="<tr><td>1단</td><td>2단</td><td>3단</td><td>4단</td><td>5단</td><td>6단</td><td>7단</td><td>8단</td><td>9단</td></tr>";
+        var num=0;
+        for(var i=1;i<10;i++){
+            str+="<tr align=center>";
+            for(var j=1;j<10;j++){
+                num=i*j;
+                str+="<td align=center>"+i+'X'+j+'='+num+"</td>";
+            }
+            str+="</tr>";
+        }
+        str+="</table>";
+        document.write(str);
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

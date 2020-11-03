@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="niewport" content="width=device-width, initial-scale1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+click me</button>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = ''">
+삭제</button>
+
+<p id="demo"></p>
+
+
+
+
+
+<script>
+    function changeImage(){
+        var image=document.getElementById('myImage');
+       
+        if(image.src.match("on")){
+            image.src="off.jpg";
+        }else{
+            image.src="on.jpg";
+        }
+    }
+</script>
+
+<img id="myImage" onclick="changeImage()" src="off.jpg" width="200" height="200">
+
+<button type="button"
+onclick="document.getElementById('demo1').style.fontSize='30px'">
+click me</button>
+<div id="demo1">CSS변경</div>
+<br>
+
+
+
+
+
+1~10사이의 숫자 입력받기
+<input id="numb" type="text">
+<button type=button onclick=myFunction()>submit
+</button>
+
+<script>
+    function myFunction(){
+        var x,text;
+        x=document.getElementById("numb").value;
+        if(isNaN(x)||x<1||x>10){
+            text="not valid";
+        }else{
+            text="valid";
+        }
+        document.getElementById("demo1").innerHTML=text;
+    }
+</script>
+<br>
+
+
+
+
+</body>
+</html>

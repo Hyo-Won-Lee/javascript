@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myclick(){
+            //사용자 입력 받는것 -> .value .innerHTML .innerText
+            //var value=document.getElementById('t1').value;
+            //alert(value);
+            //document.getElementById('t1').value=0;
+            //클릭할 떄마다 10씩 증가하게 만들어 보자.
+            //var v=document.getElementById('t1').value;
+            //document.getElementById('t1').value
+            //=Number(v)+10; //숫자열로 바꾼다.
+            //console에 text넣는 방법. html태그 넣는 방법
+            //document.getElementById('console1').innerText="<B>console1</B>";
+            //document.getElementById('console2').innerHTML+="<B>console2</B>";
+            //시간 계산하기
+            //alert(document.getElementById("d1").value);
+            /*var date1 =new Date();//현재시간 리턴
+            document.write(date1,"<br>");
+            document.write(date1.getFullYear(),"<br>"); 
+            document.write(date1.getDay(),"<br>"); //월요일이 1
+            document.write(date1.getDate(),"<br>"); //1부터 시작한다.
+            document.write(date1.getMonth(),"<br>"); //0부터 시작한다.*/
+
+            var date2=new Date(document.getElementById("d1").value);
+            document.write(date2,"<br>");
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="t1" value="50">
+    <input type="button" id="a1" onclick="myclick();" value="클릭">
+    <input type="datetime-local" id="d1">
+    <input type="datetime-local" id="d2">
+    <p id="console1"></p>
+    <p id="console2"></p>
+    
+
+</body>
+</html>

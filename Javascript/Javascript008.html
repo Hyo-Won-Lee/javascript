@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+    /*함수
+    관련있는 코드를 묶어놓은 것
+    */
+    /*
+    document.write("안녕");
+    document.write("안녕");
+    document.write("안녕");
+    document.write("안녕");
+    document.write("안녕");
+
+    function hi(){
+        document.write("안녕");
+    }
+    hi();hi();hi();hi();hi();
+    ////////////////////////////////////////////////
+    // 리턴값 함수이름(자료형 매개변수,....) //자바의 경우
+    //function 함수이름(매개변수,...) //자바스크립트의 경우
+    */
+
+
+
+
+
+    /*
+    //문자열을 리턴받아서 출력하는 형태로 변경
+    function madeTable(){
+        //document.write("<table width='100%' height=200 bgcolor=yellow><tr><td></td></tr></table>");
+        return ("<table width='100%' height=200 bgcolor=yellow><tr><td></td></tr></table>");
+    }
+
+    function moveTop(){
+        //document.write("<a href='#'>Top으로 이동</a>");
+        return ("<a href='#'>Top으로 이동</a>");
+    }
+    document.write(madeTable());
+    document.write(moveTop());
+    document.write(madeTable());
+    document.write(moveTop());
+    document.write(madeTable());
+    document.write(moveTop());
+    document.write(madeTable());
+    document.write(moveTop());
+    document.write(madeTable());
+    document.write(moveTop());*/
+
+    /*
+    function add(a,b){ //함수 선언
+        return a+b;
+    }
+    document.write(add(10,20),"<br>"); //함수 호출*/
+    </script>
+
+
+
+        <div id="1">1번-------</div>
+        <script>
+        function Say(a){
+            for(var i=0;i<a;i++)
+            document.write("안녕하세요.","<br>");
+        } 
+        Say(5);
+        </script>
+
+
+
+
+
+        <div id="2">2번--------</div>
+        <script>
+        function Hap(a,b,c){
+            var sum=0;
+            for(var i=a;i<=b;i++){
+                if(i%c==0){
+                    sum=sum+i;
+                    document.write(sum,"<br>");
+                }
+            }
+        }
+        Hap(10,50,3);
+        </script>
+ 
+
+
+
+        <div id="3">3번----------</div>
+        <script>
+        function Hap(a,b,c){
+            var sum=0;
+            for(var i=a;i<=b;i++){
+                if(i%c==0){
+                    sum=sum+i;
+                    document.write(sum,"<br>");
+                }
+            }
+        }
+        Hap(1,100,2);
+        </script>
+
+
+
+
+        <div id="4">4번------------</div>
+        <script>
+        function madeTable(){
+            return("<table width='100%' height=200 bgcolor=yellow><tr><td></td></tr></table>");
+        }
+        document.write(madeTable(),"<br>");
+        </script>
+
+
+
+
+        <div id="5">5번--------------</div>
+        <script>
+        function moveTop(count){
+            return("<a href=#"+count+">원하는 문제 번호로 이동</a>");
+        }
+        document.write(moveTop(2),"<br>");
+        </script>
+        
+    
+    
+</head>
+<body>
+
+</body>
+</html>

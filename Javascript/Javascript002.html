@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="niewport" content="width=device-width, initial-scale1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //자바스크립트 자료형은 var이다.
+        //var 자료형에 어떤 자료형이 들어있는지 개발자는 알아야 함.
+        
+        //정수형 number
+        var a=10, b=11;
+        //실수형 float
+        a=12.1;//a의 자료형은? 넣는순간 자료형이 바뀜.
+        //boolean
+        var c=true;//불리언 자료형 true flase : 0과 1로 변환 가능. 0은 false 1은 true
+        //true+1 == 2;
+        //alert(true+1);
+        var objNothing;
+        objNothing=null;
+        objNothing={};//자바스크립트는 객체 생성시 {}으로 생성한다.
+        var person={firstName:"길동",lastName:"홍",age:15};
+        //person.lastName; person.age;
+        //json: javascript object notation의 약자이다.
+        //옛날에 타기종끼리 데이터를 주고 받을 떄는 XML을 많이 사용했지만
+        //지금은 json을 사용하기 때문에 많이 물어본다.
+
+        var strHello="안녕하세요";
+        strHello='안녕하세요';//자바스크립트는 char형이 없다.
+        
+        var myFunction1=function(){ //함수는 정의부와 호출부가 있다.
+            return 'helloFunction'; //정의부
+        }
+        document.write(myFunction1()); //호출부
+
+        var myFunction2=function(a,b){
+            return a+b;
+        }
+        document.write(myFunction2(10,20));
+
+        var car=["saa","ss","aaa"];
+        document.write(car);
+
+        var arr=new Array();
+        var arr=new Array(10); //저장공간 10개
+        var arr=new Array(1,2,3); //저장공간 3개의 값이 1,2,3
+        document.write("<br>",arr);
+        //자바스크립트는 배열의 크기가 필요없음
+        //변수가 배열인지 아닌지가 중요함.
+        arr[100]="a"; //사이 인덱스값이 자동생성
+        var a;
+        // a[100]="a"; //배열이 아니어서 에러가 난다.
+        var arr=[0,1.2,"hello",[0,1,2]];
+        //자바스크립트는 다양한 데이터를 배열에 넣을 수 있다.
+        //마지막 2에 접근해보자.
+        //1.2에 접근하려면 arr[1]
+        arr[3][2]=3; //마지막2가 3으로 변경됨.
+        
+        var num1=10;
+        var num2=13.24;
+
+        //alert(10/6); //자동으로 소수점 처리됨. 실수 자료형
+        //alert(num1+num2); //실수 자료형. 계산하면 오차가 발생하는데 가중치처리 떄문임.
+        
+        //alert("this\nis");
+        //alert("this\"is");
+
+        alert("15"*"13"); //숫자로 바뀌어 연산됨.
+        alert("15"+"13"); //1513
+        alert("15"+13); //1513
+
+       document.write("<br>",!0);
+       document.write("<br>",!NaN);
+       document.write("<br>",!'');
+       document.write("<br>",!' ');
+       document.write("<br>",!null);
+       document.write("<br>",!undefined);
+       document.write(Boolean(undefined));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

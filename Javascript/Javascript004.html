@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="niewport" content="width=device-width, initial-scale1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script>
+        
+        //내장함수
+/*        alert('hi');
+        var a=prompt("성적 입력");
+        alert(a);
+        var a=confirm("확인 취소");
+        alert(a);
+        var a=10.1;
+        window.document.write(typeof a);//어떤 자료형인지 확인
+        window.document.write(typeof "asdf");
+        window.document.write(typeof []);
+        window.document.write(typeof {});
+
+        window.document.write(isNaN("숫자?"));//숫자가 아니다?
+        window.document.write(isNaN("12"));
+        window.document.write(isNaN(12));*/
+
+        var a1="10";
+        var a2="10.3";
+        var a3="10.3원";
+       // a1=a1+a1;//1010
+    /*    window.document.write(Number(a1));//소숫점이 잘리고 정수가 출력
+        window.document.write(Number(a2));
+        window.document.write(Number(a3));
+
+        window.document.write(parseInt(a1));
+        window.document.write(parseInt(a2));
+        window.document.write(parseInt(a3));
+
+        window.document.write(parseFloat(a1));
+        window.document.write(parseFloat(a2));
+        window.document.write(parseFloat(a3).toFixed(2));*/
+
+
+
+        var a="10";
+        document.write(a+a,"<br>");//false
+        a=Number(a);
+        document.write(a+a,"<br>");//false
+        var a="10.12$";
+        a=Number(a);
+        document.write(a+a,"<br>");//NaN
+
+        var a="10.12$";
+        document.write(parseInt(a));//10
+        var a="10.12$";
+        document.write(parseFloat(a));//10.12
+        var a="123.12345$";
+        //소수점 3번째 자리에서 반올림
+        document.write(parseFloat(a).toFixed(2),"<br>");
+
+
+
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

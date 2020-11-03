@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="niewport" content="width=device-width, initial-scale1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        
+        if(true){
+            document.write("true면 출력");
+        }
+        if(false){
+            document.write("false여서 출력되지 않음.");
+        }
+
+        var b=6;
+        if(b%2==0){
+            document.write("짝수");
+        }else{
+            document.write("홀수");
+        }
+        
+        var c=2540;
+        if(c%2==0){
+            document.write("2배수");
+        }if(c%3==0){
+            document.write("3배수");
+        }if(c%4==0){
+            document.write("4배수");
+        }if(c%5==0){
+            document.write("5배수");
+        }
+
+        var input=prompt("숫자");//사용자 입력 받기
+        switch(input%2){
+            case 0:
+                document.write("짝수");
+                break;
+            case 1:
+                document.write("홀수");
+                break;
+            default:
+                document.write("짝수가 아님");
+                break;
+        }
+
+
+        //예제
+        var input=prompt("숫자");
+        if(input>100){
+            document.write("100보다 크다.","<br>");
+
+            if(input%3==0){
+                document.write("3의 배수","<br>");
+            }
+        }else if(input<100){
+            document.write("100보다 작다.","<br>");
+
+            if(input%2==0){
+                document.write("짝수","<br>");
+            }else{
+                document.write("홀수","<br>");
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

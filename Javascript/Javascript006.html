@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //반복문
+        //1~100까지 3의 배수의 합
+        var count=1;//선언
+        var sum=0;
+        while(count<=100){//비교문
+            if(count%3==0){
+                sum=sum+count;
+            }
+            count++;//증감식
+        }
+        document.write("sum:"+sum);
+
+        //for 1~100사이의 3의 배수 또는 4의 배수합 구하기
+        var sum=0;
+        for(var i=1;1<=100;i++){
+            if(i%3==0||i%4==0){
+                sum=sum+i;
+            }
+        }
+        document.write(sum);
+
+
+        //1~10까지의 합
+        var sum=0;
+        var count=1;
+        do{
+            sum=sum+count;
+            count++;
+        }while(count<=10)
+        document.write(sum);
+
+
+        //break, continue. break는 반복문을 빠져나감. continue는 반복문 시작부분으로 이동
+        for(var i=1;i<=5;i++){
+            document.write(i,"<br>");
+            if(i==3){
+                break;
+            }
+        }
+        
+
+        //3만 제외하고 찍기
+        for(var i=1;i<=5;i++){
+            if(i==3){
+                continue;
+            }
+            document.write(i,"<br>");
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

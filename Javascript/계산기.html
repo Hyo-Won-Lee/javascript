@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        var str="<table border=1 width=500 height=500>";
+        str+="<tr><td colspan='5'><input type='text' id='t1' size='15' style='text-align:right; font-size:50px; width:480px; height:100px;'></td></tr>";
+        str+="<tr align=center><td width=90 height=90><input type='button' id='t2' onclick='seven();' style='font-size:50px; width:90px; height:90px;' value='7'></td><td width=90 height=90><input type='button' id='t3' onclick='eight();' style='font-size:50px; width:90px; height:90px;' value='8'></td><td width=90 height=90><input type='button' id='t4' onclick='nine();' style='font-size:50px; width:90px; height:90px;' value='9'></td><td colspan='2'><input type='button' id='t5' onclick='cancel();' style='font-size:50px; width:190px; height:90px;' value='C'></td></tr>";
+        str+="<tr align=center width=90 height=90><td><input type='button' id='t6' onclick='four();' style='font-size:50px; width:90px; height:90px;' value='4'></td><td><input type='button' id='t7' onclick='five();' style='font-size:50px; width:90px; height:90px;' value='5'></td><td><input type='button' id='t8' onclick='six();' style='font-size:50px; width:90px; height:90px;' value='6'></td><td width=90 height=90><input type='button' id='t9' onclick='div();' style='font-size:50px; width:90px; height:90px;' value='/'></td><td width=90 height=90><input type='button' id='t10' onclick='percent();' style='font-size:50px; width:90px; height:90px;' value='%'></td></tr>";
+        str+="<tr align=center width=90 height=90><td><input type='button' id='t11' onclick='one();' style='font-size:50px; width:90px; height:90px;' value='1'></td><td><input type='button' id='12' onclick='two();' style='font-size:50px; width:90px; height:90px;' value='2'></td><td><input type='button' id='13' onclick='three();' style='font-size:50px; width:90px; height:90px;' value='3'></td><td><input type='button' id='t14' onclick='mul();' style='font-size:50px; width:90px; height:90px;' value='X'></td><td><input type='button' id='t15' onclick='plus();' style='font-size:50px; width:90px; height:90px;' value='+'></td></tr>";
+        str+="<tr align=center width=90 height=90><td><input type='button' id='t16' onclick='zero();' style='font-size:50px; width:90px; height:90px;' value='0'></td><td><input type='button' id='t17' onclick='dot();' style='font-size:50px; width:90px; height:90px;' value='.'></td><td colspan='2'><input type='button' id='t18' onclick='calculate();' style='font-size:50px; width:190px; height:90px;' value='='></td><td><input type='button' id='t19' onclick='minus();' style='font-size:50px; width:90px; height:90px;' value='-'></td></tr>";
+        str+="</table>";
+        document.write(str);
+
+
+        function zero(){
+            document.getElementById("t1").value+=0;
+        }
+
+        function one(){
+            document.getElementById("t1").value+=1;
+        }
+
+        function two(){
+            document.getElementById("t1").value+=2;
+        }
+
+        function three(){
+            document.getElementById("t1").value+=3;
+        }
+
+        function four(){
+            document.getElementById("t1").value+=4;
+        }
+
+        function five(){
+            document.getElementById("t1").value+=5;
+        }
+
+        function six(){
+            document.getElementById("t1").value+=6;
+        }
+
+        function seven(){
+            document.getElementById("t1").value+=7;
+        }
+
+        function eight(){
+            document.getElementById("t1").value+=8;
+        }
+
+        function nine(){
+            document.getElementById("t1").value+=9;
+        }
+
+        function dot(){
+            document.getElementById("t1").value+=".";
+        }
+
+        function mul(){
+            document.getElementById("t1").value+="*";
+        }
+
+        function plus(){
+            document.getElementById("t1").value+="+";
+        }
+
+        function minus(){
+            document.getElementById("t1").value+="-";
+        }
+
+        function div(){
+            document.getElementById("t1").value+="/";
+        }
+
+        function percent(){
+            document.getElementById("t1").value+="%";
+        }
+
+        function cancel(){
+            document.getElementById("t1").value="";
+        }
+
+        function calculate(){
+            var temp=document.getElementById("t1");
+            var result=eval(t1.value);
+            document.getElementById("t1").value=result;
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>
