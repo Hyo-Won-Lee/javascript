@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script>
+        var a=10;
+        if(a<30){
+            let b=10;   //var와 let의 차이. var는 함수단위, let은 블록단위
+            a+=1;
+        }
+        alert(a);
+        alert(b);
+        
+        var obj={
+            a1:123, 
+            a2:"Asdf", 
+            a3:function(){
+                return this.a1+ this.a2;
+            },
+            a4:{},
+            a5:[1,2]
+        }
+        // obj.a1=678;
+        // alert(obj.a1);
+        // alert(obj.a3());
+        // obj.name='park';
+        // obj.a4.name='park';
+        obj.a5[1]=4;
+        alert(obj.a5[1]);
+
+        var arr=[];
+        var a;
+       
+        arr[4]=10;
+        //a[4]=10;
+
+        var arr=[[1,1,1],[2,2,2],[3,4]];
+
+        for(var i=0;i<3;i++){
+            for(var j=0;j<arr[i].length;j++){
+                document.write(arr[i][j]+" ");
+            }
+        document.write("<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

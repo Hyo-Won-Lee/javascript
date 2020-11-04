@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <script>
+       var arr=[[0,0,0,0],[0,0,0,0],[0,0,0,0]];
+        var count=1;
+        for(var i=0;i<3;i++){
+            for(var j=0;j<4;j++){
+                arr[i][j]=count;
+                count++;
+            }
+        document.write("<br>");
+        }
+
+        var str="";
+        str+="<table border='1'>";
+        for(var i=0;i<3;i++){
+            str+="<tr align=center>";
+            for(var j=0;j<4;j++){
+                str+="<td>"+arr[i][j]+"</td>";
+            }
+            str+="</tr>";
+            document.write("<br>");
+        }
+        str+="</table>";
+        document.write(str);
+    </script>
+</body>
+</html>
