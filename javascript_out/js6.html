@@ -15,16 +15,30 @@
             margin-top:50px;
         }
 
+        #goalLine{
+            position:absolute;
+            margin-left:550px;
+            margin-top:20px;
+            width:1px;
+            height:450px;
+            background-color:black;
+        }
+
+        #goal{
+            margin-left:535px;
+        }
+
     </style>
     <script>
     //3번 경마 게임
+        var num1=0,num2=0,num3=0,num4=0;
         var random=function(){
-
-            var num1=parseInt(Math.random()*500)+1;
-            var num2=parseInt(Math.random()*500)+1;
-            var num3=parseInt(Math.random()*500)+1;
-            var num4=parseInt(Math.random()*500)+1;
             
+            num1+=parseInt(Math.random()*5);
+            num2+=parseInt(Math.random()*5);
+            num3+=parseInt(Math.random()*5);
+            num4+=parseInt(Math.random()*5);
+
             document.getElementById('horse1').style.marginLeft=num1+'px';
             document.getElementById('horse2').style.marginLeft=num2+'px';
             document.getElementById('horse3').style.marginLeft=num3+'px';
@@ -45,13 +59,15 @@
             }
         }
 
-        var start=setInterval(random,1000);
+        var start=setInterval(random,100);
 
     </script>
 
 </head>
 <body>
     <h1>경주마 게임</h1><br>
+    <div id="goal"><b>도착</b></div>
+    <div id="goalLine"></div>
     <p><b>1번</b></p>
     <div>
         <img id="horse1" width=100 height=100 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140101_166%2Fnitro1_1388563770319moiLt_GIF%2Fhorse1.gif&type=sc960_832_gif">

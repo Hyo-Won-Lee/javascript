@@ -7,12 +7,19 @@
 
     <script>
     //2번 a,b중 먼저 100에 도달하면 이기는 게임
+        var num1=0,num2=0;
         var random=function(){
-            var num1=parseInt(Math.random()*100)+1;
-            var num2=parseInt(Math.random()*100)+1;
+            num1+=parseInt(Math.random()*10);
+            num2+=parseInt(Math.random()*10);
             document.getElementById('num1State').innerHTML+=num1+", ";
             document.getElementById('num2State').innerHTML+=num2+", ";
         
+            if(num1>=100){
+                num1=100;
+            }else if(num2>=100){
+                num2=100;
+            }
+
             if(num1 == 100 && num2 != 100){
                 document.getElementById('result1').innerHTML="a : 승";
                 document.getElementById('result2').innerHTML="b : 패";
@@ -27,14 +34,12 @@
                 clearInterval(play);
             }
         }
-        var play=setInterval(random,1000);
+        var play=setInterval(random,500);
     </script>
 
 </head>
 <body>
     <h3>먼저 100에 도달하면 이기는 게임</h3>
-    <!-- <input type="button" id="start" onclick="play()" value="게임 시작">
-    <input type="button" id="stop" onclick="stop()" value="게임 종료"> -->
     <p id="num1State"><b>a-></b></p>
     <p id="num2State"><b>b-></b></p>
     <h4>결과</h4>
