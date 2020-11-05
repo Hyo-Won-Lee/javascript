@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkDate(){
+            var s=document.getElementById("pDate").value;
+            alert(s);
+            var pDate=new Date(s);
+            var toDay=new Date();
+            var diff=toDay.getTime()-pDate.getTime();
+            var days=(diff/(24*60*60*1000));
+            var time=(diff/(60*60*1000));
+            alert("PC방 요금 : "+(time.toFixed(0)*1200)+"원");
+        }
+    </script>
+</head>
+<body>
+    <!-- pc방 요금 계산 프로그래밍 구현
+    시간당 1200원 -->
+    <input type="datetime-local" id="pDate">
+    <input type="button" onclick="checkDate()" value="button">
+</body>
+</html>

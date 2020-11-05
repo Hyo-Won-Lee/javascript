@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    //2번 a,b중 먼저 100에 도달하면 이기는 게임
+        var random=function(){
+            var num1=parseInt(Math.random()*100)+1;
+            var num2=parseInt(Math.random()*100)+1;
+            document.getElementById('num1State').innerHTML+=num1+", ";
+            document.getElementById('num2State').innerHTML+=num2+", ";
+        
+            if(num1 == 100 && num2 != 100){
+                document.getElementById('result1').innerHTML="a : 승";
+                document.getElementById('result2').innerHTML="b : 패";
+                clearInterval(play);
+            }else if(num1 != 100 && num2 == 100){
+                document.getElementById('result1').innerHTML="a : 패";
+                document.getElementById('result2').innerHTML="b : 승";
+                clearInterval(play);
+            }else if(num1 == 100 && num2 == 100){
+                document.getElementById('result1').innerHTML="a : 무승부";
+                document.getElementById('result2').innerHTML="b : 무승부";
+                clearInterval(play);
+            }
+        }
+        var play=setInterval(random,1000);
+    </script>
+
+</head>
+<body>
+    <h3>먼저 100에 도달하면 이기는 게임</h3>
+    <!-- <input type="button" id="start" onclick="play()" value="게임 시작">
+    <input type="button" id="stop" onclick="stop()" value="게임 종료"> -->
+    <p id="num1State"><b>a-></b></p>
+    <p id="num2State"><b>b-></b></p>
+    <h4>결과</h4>
+    <div id="result1"></div>
+    <div id="result2"></div>
+</body>
+</html>

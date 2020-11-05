@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        //시계
+        var isFlag=true;
+        var f1=function(){
+            var amPm="";
+            var date=new Date();   
+            var time=date.getHours(date);
+            var min=date.getMinutes(date);
+            var sec=date.getSeconds(date);
+            if(time>=13){
+                amPm="PM";
+                time-=12;
+            }else{
+                amPm="AM";
+            }
+            document.getElementById('display').innerHTML=time+":"+min+":"+sec+" "+amPm;
+            
+        }
+
+        var f2=setInterval(f1,500);
+
+        var f3=function clear(){
+            clearInterval(f2);
+        }
+
+    </script>
+</head>
+<body>
+    <h2>시계</h2>
+    <input type="button" id="start" onclick="f4()" value="시작">
+    <input type="button" id="stop" onclick="f3()" value="종료">
+    <p id="display">00:00:00</p>
+    
+
+</body>
+</html>

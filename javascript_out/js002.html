@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    //Date 시간 데이터 저장객체
+    //new Date() 현재시간 저장된 객체
+    //    new Date(year,month,day,hours,minutes,seconds,milliseconds);
+    //원하는 시간으로 객체 만들기
+    //    new Date(milliseconds);
+    //iso표준시간 입력
+    //    new Date(date string);
+    //2000-03-05 12:11:11        
+    //    new Date("Octover 13,2014 11:13:00");
+
+    // var d=new Date();
+    // alert(d);
+    // alert(d.getTime());
+
+    function checkDate(){
+        // var s=document.getElementById("pDate").value;
+        // alert(s);
+        // var pDate=new Date(s);  //과거
+        // var toDay=new Date();   //현재
+        // var diff=toDay.getTime()-pDate.getTime();   //차이
+        // var days=diff/(24*60*60*1000);  //일수 계산
+        // var time=diff/(60*60*1000); //시간계산
+        // var min=diff/(60*1000); //분계산
+        // alert(days);
+        // alert(time);
+        // alert(min);
+        // alert("요금 : "+(time.toFixed(0)*1200)+"원");
+        // if(days>30){
+        //     alert("교환시간이 지났습니다.");
+        // }else{
+        //     alert("교환가능");
+        // }
+    //타이머
+    //setTimeout 특정 시간에 1번 실행
+    //setInterval 특정 시간마다 여러번 실행
+    //clearInterval 특정 타이머를 종료시킴.
+        /*var test=function testFunction(){
+            alert('setTimeOut');
+        }
+
+        setTimeout(test,2000);*/
+    }
+        var f1=function(){
+            alert('f1');
+        }
+
+        var f2=setInterval(f1,2000);
+
+
+        var f3=function clear1(){
+            clearInterval(f2);
+        }
+        
+
+
+
+
+    
+    </script>
+
+
+
+</head>
+<body>
+    <input type="button" onclick="f2()" value="button">
+    <input type="button" onclick="f3()" value="button2">
+
+
+</body>
+</html>
