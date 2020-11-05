@@ -1,0 +1,42 @@
+<script language="javascript" type="text/javascript">
+//[1] 단순 if문
+var a = 8;
+if (a % 2 == 0)
+{
+    document.write(a + "는 짝수입니다.");        
+}
+</script>
+<hr />
+<script language="javascript" type="text/javascript">
+//[2] else 문
+var b = 3;
+if (b % 2 != 0) // 즉, 홀수라면
+{
+    document.write("홀수입니다.");
+}
+else
+{
+    document.write("짝수입니다.");
+}
+</script>
+<hr />
+<script language="javascript" type="text/javascript">
+//[3] 다중 if문
+var c = 7;
+if (c % 2 == 0) // 2의 배수(짝수) 라면...
+{
+    document.write("2의 배수입니다.");    
+}
+else if (c % 3 == 0) // 3의 배수라면
+{
+    document.write("3의 배수입니다.");        
+}
+else if (c % 4 == 0) // 4의 배수라면
+{
+    document.write("4의 배수입니다.");    
+}
+else // 2의 배수, 3의 배수, 4의 배수가 아니라면...
+{
+    document.write("2,3,4의 배수가 아닙니다.");    
+}
+</script>

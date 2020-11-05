@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>firstChild, lastChild : 처음, 마지막 자식 노드 반환</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            var myFavorite = document.getElementById("myFavorite");
+
+            // 첫번째 자식 노드
+            alert(myFavorite.firstChild.nodeName); // LI
+
+            // 마지막 자식 노드
+            alert(myFavorite.lastChild.innerHTML); // jQuery
+
+        };    
+    </script>
+</head>
+<body>
+
+    <ul id="myFavorite"><li>JavaScript</li><li>DOM</li><li>jQuery</li></ul>
+
+</body>
+</html>

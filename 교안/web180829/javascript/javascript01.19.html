@@ -1,0 +1,37 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Document</title>
+<script>
+    window.onload=function(){
+         var myDiv=document.getElementsByTagName('div')[0];
+         console.log(myDiv);
+         console.log(myDiv.firstChild);
+         console.log(myDiv.firstChild.innerHTML);
+//textnode에서 .data는 문자열이다. 
+         console.log(myDiv.firstChild.firstChild.data);
+         console.log(myDiv.firstChild.nextSibling);
+         console.log(myDiv.lastChild);
+
+        //바나나를 찾아서 사과 문자열을 찍어보자.
+        //바나나를 찾아서 오렌지 문자열을 찍어보자.
+        //sibling
+        var banana=document.getElementsByTagName("li")[1];
+        var apple=banana.previousSibling;
+        var orange=banana.nextSibling;
+        alert(apple.firstChild.data);
+        alert(orange.firstChild.data);
+    }
+    
+</script>
+</head>
+<body>    <div><p>과일리스트</p><ul><li>사과</li><li>바나나</li><li>오렌지</li></ul></div>
+</body>
+</html>
+
+
+
+

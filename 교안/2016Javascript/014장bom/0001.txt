@@ -1,0 +1,10 @@
+JS Browser BOM   브라우저 오브젝트 모델
+JS Window        he Browser Object Model (BOM) allows JavaScript to "talk to" the browser.
+JS Screen        The window.screen object contains information about the user's screen.
+JS Location      The window.location object can be used to get the current page address (URL) and
+		 to redirect the browser to a new page.
+JS History       The window.history object contains the browsers history.    
+JS Navigator     The window.navigator object contains information about the visitor's browser.
+JS Popup Alert   JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.
+JS Timing        타이머
+JS Cookies       로컬에 저장되는 사용자 정보

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        
+       
+        // 출력합니다.
+        var output = '';
+        for (var i = 0; i < array10.length; i++) {
+            output += i + ' : ' + array10[i] + '\n';
+        }
+        alert(output);
+      
+		///////////////////String 메소드
+		 // 변수를 선언하고 정렬합니다.
+        var array = [52, 273, 103, 32];
+    
+		
+		alert(array);
+        array.sort();//숫자 오름차순이 아닌 문자 오름차순으로 정렬한다.//.reverse 내림차별  정렬 방법
+        // 출력합니다.
+        alert("정렬");
+        alert(array);
+		/////////////////////
+		//숫자 오름차순 정렬
+		  var array = [52, 273, 103, 32];
+        array.sort(function (left, right) {
+            return left - right;//양수이면 변경  음수이면 변경하지 않음 같으면 변경하지 않음
+        });
+        // 출력합니다.
+        alert(array);
+		/////////////////////
+		//숫자 내림차순 정렬
+		  var array = [52, 273, 103, 32];
+        array.sort(function (left, right) {
+            return right-left;
+        });
+        // 출력합니다.
+        alert(array);	
+    </script>
+</head>
+<body>
+
+</body>
+</html>

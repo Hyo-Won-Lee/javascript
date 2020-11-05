@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	///삭제하지 못하게 만드는 seal
+        // 변수를 선언합니다.
+        var person = {
+            name: '윤인성',
+            region: '서울특별시',
+            hobby: '기타'
+        };
+
+        Object.seal(person);
+        delete person.name;
+
+        // 출력합니다.
+        alert(person.name);
+		/////////////////////////////////
+		//Object.freeze() 	객체의 속성 삭제와 수정을 제한합니다.
+		//Object.isFrozen() 객체에 속성 삭제와 수정이 가능한지 확인합니다.
+		//////////////////////////////////
+		// 변수를 선언합니다.
+        var object = { name: '윤인성' };
+        // 속성을 추가합니다.
+        Object.defineProperty(object, 'region', {
+            value: '서울특별시'
+        });
+        // 출력합니다.
+        alert(Object.keys(object));
+        alert(Object.getOwnPropertyNames(object));
+		//region 속성에서 차이가 있는데 defineproperty 로 메소드를 추가하면 기본적으로 
+		//enuberable이 false이다
+		//keys속성은 enumerable이 true인 속성만 //getOwnPropertyNames enumeralbe에 관계없이 모든 속성
+    </script>
+</head>
+<body>
+
+</body>
+</html>

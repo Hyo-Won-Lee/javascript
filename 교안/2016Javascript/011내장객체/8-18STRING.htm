@@ -1,0 +1,27 @@
+
+<pre>
+<script language="JavaScript">
+//[3] 문자열 관련 객체/함수
+var s = " Abc Def Fed Cba ";
+with(document) {
+     write(s.bold() + "<br>");//<b>
+     writeln(s.big());//<big>
+     writeln(s.italics());//<i>
+     writeln(s.sub());//<sub>
+     writeln(s.fontcolor("blue").fontsize(7));//<font>
+     writeln(s.link("http://www.dotnetkorea.com/"));//<a href="">
+     writeln(s.length);//길이
+     writeln(s.toLowerCase());//소문자 : LCase()
+     writeln(s.toUpperCase());//대문자 : UCase()
+     writeln(s.charAt(5));//5번째 인덱스에 위치하는 문자
+     writeln(s.indexOf("e"));//"e" 문자열의 인덱스(위치)
+     writeln(s.lastIndexOf("e"));//뒤에서 "e" 문자열 검색
+     writeln(s.substring(5,8));//5번째인덱스에서 8-1번째
+     writeln(s.substr(5,3));//5번째인덱스부터 3자 반환
+     var ss = s.split(" ");//공백을 기준으로 배열값으로 반환
+     for(i = 0; i < ss.length; ++i) {
+          writeln(ss[i]);
+     }
+}
+</script>
+</pre>

@@ -1,0 +1,31 @@
+<script language="javascript" type="text/javascript">
+// 1~100까지 정수 중 3의 배수를 제외한 수의 합
+var sum = 0;
+
+for (var i = 1; i <= 100; i++)
+{
+    if (i % 3 == 0)
+    {
+        continue; // 아래 실행문을 실행하지 않고 다음 구문(조건절)으로 이동
+    }
+    
+    sum += i;
+}
+
+document.write(sum);
+</script>
+<hr />
+<script language="javascript" type="text/javascript">
+// 1~100까지 정수 중 3의 배수를 제외한 수의 합
+var sum2 = 0;
+for (var i = 1; i <= 100; i++)
+{
+    if ( !(i % 3 == 0) )
+    {
+        sum2 += i;
+    }
+}
+document.write(sum2);
+</script>
+
+

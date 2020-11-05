@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>텍스트 노드 생성 : createTextNode</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            // 텍스트 노드 생성
+            var str = document.createTextNode("반갑습니다.");
+            // 특정 개체에 추가
+            var theText = document.getElementById("myText");
+            theText.appendChild(str); // id가 myText인 <span> 태그에 "반갑습니다." 텍스트 추가
+
+            // 새로운 요소를 생성하고 새로운 텍스트를 생성하고 body 태그에 추가
+            var divTag = document.createElement("div");
+            var divText = document.createTextNode("또 만나요.");
+            divTag.appendChild(divText);
+            document.body.appendChild(divTag);
+
+            //alert(divText.nodeType); // 3 : 텍스트노드
+            //alert(divText.nodeName); // #text
+        };
+    </script>
+</head>
+<body>
+    <span>안녕하세요.</span>
+    <span id="myText"></span>
+
+</body>
+</html>

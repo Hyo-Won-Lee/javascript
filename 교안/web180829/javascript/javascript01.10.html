@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    
+    var myCar={
+        model:"520d",
+        speed:60,
+        color:"red",
+        brake:function(){
+            this.speed=this.speed-10;
+        },
+        accel:function(){
+            speed=10;
+            this.speed=this.speed+10;
+        },
+        toString:function(){
+            return "[model:"+this.model+",speed:"+this.speed+",color:"+this.color+"]";
+        },
+        changeColor:function(changeColor){
+            //this.color="yellow";
+            this.color=changeColor;
+
+            //hello world
+            //hellow
+            //hello
+            //yellow
+        }
+    }
+    // alert(myCar.toString());
+    // myCar.accel();
+    // alert(myCar.toString());
+    // myCar.brake();
+    // alert(myCar);
+    // myCar.accel();
+    // alert(myCar);
+
+    //자동차 색상을 바꾸는 여러가지 방법을 
+    //구현하보자.
+    myCar.color="blackPink";
+    alert(myCar);
+    myCar.changeColor("yellow");
+    myCar.changeColor("green");
+    alert(myCar);
+  
+    //Student 객체를 만들어
+    //학생이름,학번,국,영,수 성적을 저장하고(속성 5개)
+    //성적의 평균,총점(필드 2개)을 구하는 프로그램을 완성하시오.
+    //1. 함수로 만들어 실행해보자
+    //2. 객체로 업그래이드 해보자.
+    
+
+
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

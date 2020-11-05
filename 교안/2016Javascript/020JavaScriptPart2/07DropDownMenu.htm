@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>드롭다운 메뉴</title>
+</head>
+<body>
+<div>
+    <script type="text/javascript">
+        // 페이지 로드 이벤트
+        window.onload = function () {
+            // 드롭다운 메뉴의 기본값 설정
+            document.getElementById("mnuMyWebsite").selectedIndex = 0;
+            // change 이벤트 처리기 구현
+            document.getElementById("mnuMyWebsite").onchange = function () {
+                var myWebsiteUrl = document.getElementById("mnuMyWebsite").options[
+                    document.getElementById("mnuMyWebsite").selectedIndex].value;
+                if (myWebsiteUrl != "") {
+                    window.location.href = myWebsiteUrl; // 지정된 URL로 이동
+                }
+            };
+        };
+    </script>
+    <select id="mnuMyWebsite">
+        <option value="">My Website</option>
+        <option value="http://www.dotnetkorea.com">닷넷코리아</option>
+        <option value="http://www.visualacademy.com">비주얼아카데미</option>
+        <option value="http://www.JavaCampus.com">자바캠퍼스</option>
+        <option value="http://www.LicenseLand.com">라이선스랜드</option>
+    </select>
+</div>
+</body>
+</html>

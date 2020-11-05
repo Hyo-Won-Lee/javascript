@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+<head>
+
+	<script>
+	function Student(name,korean,math,english){
+		this.이름=name;
+		this.국어=korean;
+		this.수학=math;
+		this.영어=english;
+		this.getAll+=1;
+	}
+	Student.prototype.getAll=10;
+	Student.prototype.getSum=function(){
+		return this.국어+this.수학+this.영어;
+	};
+	Student.prototype.getAverage=function(){
+		return this.getSum()/3;
+	};
+	Student.prototype.toString=function(){
+		return this.이름+":"+this.getAverage();
+	};
+
+	var student1=new Student('s1',13,31,13);
+	document.write(student1.getAll);
+	document.write("<br>");
+	var student2=new Student('s2',31,13,31);
+	document.write(student2.getAll);
+
+
+
+	function Student(name,korean,math,english){
+		this.이름=name;
+		this.국어=korean;
+		this.수학=math;
+		this.영어=english;
+		this.getAll.name+=1;
+	}
+	Student.prototype.getAll={name:1};
+	Student.prototype.getSum=function(){
+		return this.국어+this.수학+this.영어;
+	};
+	Student.prototype.getAverage=function(){
+		return this.getSum()/3;
+	};
+	Student.prototype.toString=function(){
+		return this.이름+":"+this.getAverage();
+	};
+
+	var student1=new Student('s1',13,31,13);
+	document.write(student1.getAll.name);
+	document.write("<br>");
+	var student2=new Student('s2',31,13,31);
+	document.write(student2.getAll.name);	
+	</script>
+</head>
+<body>
+</body>
+</html>

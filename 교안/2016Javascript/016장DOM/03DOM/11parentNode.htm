@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>parentNode : 부모 노드 반환</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            var meNode;
+            meNode = document.getElementById('me');
+            meNode.style.backgroundColor = 'yellow';
+
+            var pNode;
+            pNode = meNode.parentNode; // 부모 노드
+            pNode.style.backgroundColor = 'red';
+
+            var bodyTag;
+            bodyTag = pNode.parentNode;
+            bodyTag.style.backgroundColor = 'blue';
+        };
+    </script>
+</head>
+<body>
+    <div>
+    ...
+    </div>
+    <div>
+        <div>X</div>
+        <div>X</div>
+        <div id="me">X</div>
+        <div>X</div>
+        <div>X</div>
+    </div>
+    <div>
+    ...
+    </div>
+</body>
+</html>

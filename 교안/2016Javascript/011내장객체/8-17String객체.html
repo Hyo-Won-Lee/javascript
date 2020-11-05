@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // String 객체선언방법
+	// 자세한 내용은 검색해서 처리해 보자.
+        var stringFromLiteral = 'Hello World..!';
+        var stringFromConstructor = new String('Hello World..!');
+        // 변수의 자료형을 출력합니다.
+        var output = '';
+        output += typeof (stringFromLiteral) + '\n';
+        output += typeof (stringFromConstructor);
+        alert(output);
+		/////string 속성과 함수를 알아보자. length속성 
+		   // 변수를 선언합니다.
+        var characters = prompt('사용할 비밀번호를 입력해주세요.', '6글자 이상');
+        // 출력합니다.
+        if (characters.length < 6) {
+            alert('6글자 이상으로 입력하세요.');
+        } else {
+            alert('잘했어요!');
+        }	
+		///////////////////////////
+		    // string 잘못된 사용법
+        var string = 'abcdefg';
+        // 출력합니다.
+        string.toUpperCase();
+		string = string.toUpperCase();
+        alert(string);
+		
+		//string.toUpperCase().anchor('name');
+		////////////////////////////////////////////
+		 // string의 html관련 속성들
+        var string = 'JavaScript';
+        var output = '';
+        output += 'anchor: ' + string.anchor() + '<br/>';
+        output += 'big: ' + string.big() + '<br/>';
+        output += 'blink: ' + string.blink() + '<br/>';
+        output += 'bold: ' + string.bold() + '<br/>';
+        output += 'fixed: ' + string.fixed() + '<br/>';
+        output += 'string: ' + string.fontcolor('red') + '<br/>';
+        output += 'fontsize: ' + string.fontsize(15) + '<br/>';
+        output += 'italics: ' + string.italics() + '<br/>';
+        output += 'link: ' + string.link('http://hanb.co.kr') + '<br/>';
+        output += 'small: ' + string.small() + '<br/>';
+        output += 'strike: ' + string.strike() + '<br/>';
+        output += 'sub: ' + string.sub() + '<br/>';
+        output += 'sup: ' + string.sup() + '<br/>';
+        // 출력합니다.
+        document.write(output);
+		alert(output);
+		////////////////////////////////////////////////
+		   // 변수를 선언합니다.
+        var output = 'Hello World .. !';
+	//변현한 데이터를 리턴한 이유는 메서드 체이닝을 사용하기위해서이다..
+        // 메서드 체이닝
+        output = output.toLowerCase();
+        output = output.substring(0, 10);
+        output = output.anchor('name');
+        // 출력합니다.
+        alert(output);
+		///////////////////////
+		 // 변수를 선언합니다.
+        var output = 'Hello World .. !';
+        // 메서드 체이닝
+        output = output.toLowerCase().substring(0, 10).anchor('name');
+        // 출력합니다.
+        alert(output);
+		
+    </script>
+</head>
+<body>
+
+</body>
+</html>

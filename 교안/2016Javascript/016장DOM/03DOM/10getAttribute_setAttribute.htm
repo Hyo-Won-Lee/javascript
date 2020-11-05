@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>요소 노드의 속성 값 설정 또는 반환 : setAttribute(), getAttribute()</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        // 페이지 로드 이벤트 잡기
+        window.onload = function () {
+            // 버튼 클릭 이벤트 잡기
+            document.getElementById("btnGetData").onclick = function () {
+                var txtMessage = document.getElementById("txtMessage");
+                var strMessage = "id : " + txtMessage.getAttribute("id");
+                strMessage += "\nvalue : " + txtMessage.getAttribute("value");
+                strMessage += "\ndata : " + document.getElementById("txtMessage").value;
+                alert(strMessage);
+            };
+            // 클릭 이벤트 부여
+            document.getElementById("btnCreateElement").onclick = function () {
+                var txtName = document.createElement('input');
+                txtName.setAttribute('type', 'text');
+                txtName.setAttribute("id", "txtName");
+                txtName.setAttribute('name', "txtName");
+                txtName.setAttribute("value", '홍길동');
+                document.body.appendChild(txtName); 
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="txtMessage" name="txtMessage" value="Hello" />
+    <input type="button" id="btnGetData" name="btnGetData" value="정보 얻기" />
+    <hr />
+    <input type="button" id="btnCreateElement" name="btnCreateElement" value="TextBox 만들기" />
+    <!--<input type="text" id="txtName" name="txtName" value="홍길동" />-->
+
+</body>
+</html>

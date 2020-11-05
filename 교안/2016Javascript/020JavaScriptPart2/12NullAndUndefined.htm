@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>null과 undefined</title>
+    <script type="text/javascript">
+        // 출력 전담 함수
+        function print(msg) {
+            document.write(msg + "<br />");
+        }
+        //[1] null : 아무것도 없다는 것을 의미
+        var nullValue = null;
+        if (!nullValue) {
+            print("null은 조건절에서 false로 취급");
+        }
+        //[2] 값을 할당
+        var hasValue = "아무거나";
+        if (hasValue) {
+            print("값이 들어있는 변수는 true로 취급");
+        }
+        hasValue = 0;
+        if (!hasValue) {
+            print("변수에 할당된 값이 0이면 false로 취급");
+        }
+        //[3] undefined : 변수의 값이 아무것도 없음
+        var notValue;
+        if (!notValue) {
+            print("할당되지 않은 변수는 false로 취급 : " + notValue);
+        }
+        var obj = { name: "홍길동" };
+        print(obj.name + ", " + obj.age); 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

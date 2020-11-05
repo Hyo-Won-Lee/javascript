@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Math 객체</title>
+    <script src="print.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // 페이지 로드 이벤트 잡기
+        window.onload = function () {
+
+            print("<h3>Math 객체의 주요 멤버</h3>");
+
+            // Math.abs() : 절대값
+            print(Math.abs(3.4)); // 3.4
+            print(Math.abs(-3.4)); // 3.4
+
+            // Math.floor() : 내림
+            print(Math.floor(3.98)); // 3
+            print(Math.floor(-3.98)); // -4
+
+            // Math.ceil() : 올림
+            print(Math.ceil(3.98)); // 4
+            print(Math.ceil(-3.98)); // -3
+
+            // Math.pow() : 거듭제곱
+            print(Math.pow(2, 10)); // 1024
+            print(Math.pow(2, 20)); // 1048576
+
+            // Math.random() : 랜덤값
+            print(Math.random()); // 0~1사이의 값
+
+            // Math.round() : 반올림
+            print(Math.round(3.141592)); // 3
+            print(Math.round(3.141592 * 10) / 10); // 3.1 
+            print(Math.round(3.141592 * 100) / 100); // 3.14 
+
+            // Math.max(), Math.min()
+            print(Math.max(3, 5)); // 5
+            print(Math.min(3, 5)); // 3
+
+            // Math.sin(), ...
+        }; 
+    </script>
+</head>
+<body>
+    <span id="message"></span>
+</body>
+</html>

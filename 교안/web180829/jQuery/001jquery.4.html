@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var count=0;
+        $(document).ready(function(){
+            $("div").click(function(){
+              //alert("test");
+              switch(count){
+                  case 0:
+                    $(this).animate({left:"200px"});
+                  break;
+                  case 1:
+                    $(this).animate({top:"200px"});
+                  break;
+                  case 2:
+                    $(this).animate({left:"0px"});
+                  break;
+                  case 3:
+                    $(this).animate({top:"0px"});
+                  break;
+
+
+            }
+              count=++count%4;
+            });
+        });
+    </script>
+</head>
+<style>div{width:100px; height:100px; position:absolute;background-color:red;}</style>
+<body>
+    <div id="move"></div>
+    
+    
+</body>
+</html>

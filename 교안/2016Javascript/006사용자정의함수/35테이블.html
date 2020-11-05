@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+document.write("<table border='1'>");
+for(var y=0;y<10;y++){
+	document.write("<tr>");
+		for(var x=0;x<10;x++){
+document.write("<td width='15' height='15' id='x"
+	+x+"y"+y+"' bgcolor='white'>");
+document.write("</td>");
+		}
+	document.write("</tr>");
+}
+document.write("</table>");
+
+
+function ChangeColor(x,y,color){
+	document.getElementById("x"+x+"y"+y+"").bgColor=color;
+
+};
+
+ChangeColor(1,1,'red');
+	</script>
+</head>
+<body>
+</body>
+</html>

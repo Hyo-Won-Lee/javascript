@@ -1,0 +1,24 @@
+<h3 style="text-align:center;">구구단 출력</h3>
+
+<script language="javascript" type="text/javascript">
+document.write("<table border='1' width='100%'>");
+document.write("<tr>");
+for (var i = 2; i <= 9; i++) // 단 반복
+{
+  document.write("<td bgcolor='silver' align='center'>" + i + "단</td>");
+}
+document.write("</tr>");
+document.write("<tr>");
+for (var j = 2; j <= 9; j++)
+{
+    document.write("<td>");
+    for (var k = 1; k <= 9; k++)
+    {
+        document.write(j + " * " + k + " = " + (j * k) + "<br />");
+    }
+    document.write("</td>");    
+}
+document.write("</tr>");
+document.write("</table>");
+</script>
+

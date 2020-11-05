@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    function checkDate(){
+        alert(document.getElementById("pDate").value);
+        var s=document.getElementById("pDate").value;
+        //"2018-05-06"  ""
+        var pDate=new Date(s);
+        var toDay=new Date();
+        var diff=toDay.getTime()-pDate.getTime();
+        var days=diff/86400000;
+        if(days>30){
+            alert("교환 기한이 지났습니다.");
+        }
+        //.getTime()  현재 시간을 미리세컨드로 리턴되는 숫자 데이터
+        //86400000  //1000*60*60*24
+        //alert(pDate+":"+pDate.getTime());
+        
+    }
+    
+    
+
+</script>
+</head>
+<body>
+구매 날짜
+<input type="date" id="pDate">
+<input type="button" onclick="checkDate()" value="button">
+</body>
+</html>

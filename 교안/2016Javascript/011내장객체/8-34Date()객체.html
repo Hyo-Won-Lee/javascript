@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var date = new Date();
+
+        // 출력합니다.
+        alert(date);
+		///////////////////////////////문자로 날짜 대이터 생성
+		var date = new Date('December 9');
+        var date = new Date('December 9, 1991');
+        var date = new Date('December 9, 1991 02:24:23');
+		/////////////////////////////////숫자로 날짜 데이터 생성
+ 	    var date = new Date(1991, 11, 9);
+        var date = new Date(1991, 11, 9, 2, 24, 23);
+        var date = new Date(1991, 11, 9, 2, 24, 23, 1);
+		
+		 // Unix Time 1970 1 1 12시 자정을 기준으로 경과한 시간을 밀리초 단위로 나타내는 방식
+        var date = new Date(2732741033257);
+		
+		///////////////////////////
+		// get,set 함수 사용
+        var date = new Date();
+
+        // 현재 시간에서 7일을 더합니다.    
+        date.setDate(date.getDate() + 7);//자바랑 차이가 있음
+
+        // 출력합니다.
+        alert(date);
+		////////////  Time객체의 각종 문자열
+        var date = new Date(1991, 11, 9);//new Date()도 찍어보자
+
+        // 출력합니다.
+        var output = '';
+        output += '★toDateString: ' + date.toDateString() + '\n';
+        output += '★toGMTString: ' + date.toGMTString() + '\n';
+        output += '★toLocaleDateString: ' + date.toLocaleDateString() + '\n';
+        output += '★toLocaleString: ' + date.toLocaleString() + '\n';
+        output += '★toLocaleTimeString: ' + date.toLocaleTimeString() + '\n';
+        output += '★toString: ' + date.toString() + '\n';
+        output += '★toTimeString: ' + date.toTimeString() + '\n';
+        output += '★toUTCString: ' + date.toUTCString() + '\n';
+        alert(output);
+
+		//////////////////////////////
+		    // 1000 미리세컨드 는 1초  60초는 1분 60분은 1시간 24시간은 1일
+        var now = new Date();
+        var before = new Date('December 9, 1991');
+        // 날짜 간격을 구합니다.
+        var interval = now.getTime() - before.getTime();
+        interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+
+        // 출력합니다.
+        alert('Interval: ' + interval + '일');
+		
+		///////////////////////Date객체에 비교 함수 추가하기
+		 // Date생성자 함수의 프로토타입에 메서드를 추가합니다.
+        Date.prototype.getInterval = function (otherDate) {
+            // 변수를 선언합니다.
+            var interval;
+
+            // 양수로 날짜 간격을 구하려고 조건문을 사용합니다.
+            if (this > otherDate) {
+                interval = this.getTime() - otherDate.getTime();
+            } else {
+                interval = otherDate.getTime() - this.getTime();
+            }
+
+            // 리턴합니다.
+            return Math.floor(interval / (1000 * 60 * 60 * 24));
+        };
+
+        // 변수를 선언합니다.
+        var now = new Date();
+        var before = new Date('December 9, 1991');
+
+        // 출력합니다.
+        alert('Interval: ' + now.getInterval(before) + '일');
+
+		 /////////////////////////////
+        // 변수를 선언합니다.
+        var value = 0;
+        var startTime = new Date().getTime();
+
+        // 반복문
+        while (new Date().getTime() < startTime + 1000) { value++; }
+
+        // 출력합니다.
+        alert(value);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

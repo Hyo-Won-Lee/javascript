@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	///////object 생성법
+		var object ={};
+		var object = new Object();
+	
+	/////////////object속성
+        // 변수를 만듭니다.
+        var object = { property: 273};
+        object.property=273;
+
+        // 출력합니다.
+        //object 최상의 객체로 모든 객체가 상속해서 안에 내용을 가지고 있다.
+        //몇가지 내장함수를 가지고 있다. P250를 확인해 보면 된다.
+
+        var output = '';
+        output += "HOP('property'): " + object.hasOwnProperty('property') + '\n';
+        output += "HOP('constructor'): " + object.hasOwnProperty('constructor') + '\n';
+        output += "PIE('property'): " + object.propertyIsEnumerable('property') + '\n';
+        output += "PIE('constructor'): " + object.propertyIsEnumerable('constructor');
+        alert(output);
+		//property가 선언되어 있어 관련 내용들이 true로 뜬다 삭제하고 실행해보자.
+
+        // for in 반복문을 사용합니다.
+        for (var key in object) {
+            alert(key+' = '+object[key]);
+        }		
+		
+
+        //객체가 문자열로 자동 형변환 될때 호출되는 함수
+        //일반적으로 시스탬이 알아서 만들어주고 사용자가 제정의 한다. 
+	   ///////toString() 변수를 선언합니다.
+        var object = new Object();
+
+        // 출력합니다.
+        alert(object);
+        alert(object.toString());
+		
+		///////toString 재정의
+		   // 변수를 선언합니다.
+        var student = {
+            name: '윤명월',
+            grade: '대학교 1학년',
+           // toString: function () {
+           //     return this.name + ' : ' + this.grade;
+           //}
+        };
+        // 출력합니다.
+        alert(student);
+		//toString에 주석을 하고 찍어보자.
+		//객체가 강제로 string으로 형변환 될때 toString이 실행된다.
+    </script>
+</head>
+<body>
+
+</body>
+</html>

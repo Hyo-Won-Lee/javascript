@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+	function Student(){
+	}
+
+	//Student();
+	var student=new Student();
+
+	function Student(name,korean,math,english){
+		this.이름=name;
+		this.국어=korean;
+		this.수학=math;
+		this.영어=english;
+		return this;
+	}
+
+	var student1= new Student('park1',86,79,87);
+	var student2= new Student('park2',86,79,85);
+	
+
+	alert(window.student1.이름);
+	alert(window.이름);
+	alert(window.student2.이름);
+	alert(window.이름);
+
+
+	var student1= Student('park1',86,79,87);
+	var student2= Student('park2',86,79,85);
+	
+
+	alert(window.student1.이름);
+	alert(window.이름);
+	alert(window.student2.이름);
+	alert(window.이름);
+
+
+	</script>
+</head>
+<body>
+</body>
+</html>

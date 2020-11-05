@@ -1,0 +1,30 @@
+<script language="javascript" type="text/javascript">
+// 함수 선언
+function Hi()
+{
+    document.write("안녕<br />");
+}
+function Hello(msg)
+{
+    document.write(msg + "<br />");
+}
+function Say(str)
+{
+    var table = "<table border='1'><tr><td>" + str + "</td></tr></table>";
+    return table;
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+// 함수 호출
+//[1] 매개변수도 없고, 반환값도 없는 함수
+Hi(); // "안녕"
+//[2] 매개변수가 있는 함수
+Hello("안녕"); // "안녕"
+Hello("또봐"); // "또봐"
+//[3] 반환값이 있는 함수
+document.write( Say("안녕") ); // 1행 1열의 테이블에 "안녕" 문자열을 출력
+var str = Say("또봐");
+document.write( str );
+</script>
+

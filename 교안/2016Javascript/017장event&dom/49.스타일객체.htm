@@ -1,0 +1,40 @@
+<!-- 박스를 클릭하면 기존에 입력된 글씨가 지워진다.
+	마우스를 올려놓으면 색상이 변경된다.
+	버튼을 클릭하면 박스모양이 변경된다.       
+-->
+<html>
+<head>
+    <title>스타일 객체 : style</title>
+    <style type="text/css">
+    #Panel1 
+    {
+        background-color:Yellow; width:"200px"; height:"200px";   
+    }
+    </style>
+    <script language="Javascript" type="text/javascript">
+    function ChangeColor(obj) {
+        obj.style.backgroundColor = '';    
+    }
+    function ChangeValue(obj) {
+        obj.value = ""; // HTML 레벨 : 각각의 속성을 지정
+        obj.size = 40;
+        obj.style.border = "1px solid red"; // CSS 레벨 : style 객체로 접근
+    }
+    function ChangeTextBox() {
+        document.getElementById("txt").value = "";
+        document.getElementById("txt").style.backgroundColor = "red";
+        //변수에 넣어서 처리하는 방법
+    }
+    </script>
+</head>
+<body>
+<div id="Panel1" 
+    onmouseover="this.style.backgroundColor='silver';" 
+    onmouseout="ChangeColor(this);">
+    <input type="text" id="txt" value="아이디" 
+        onfocus="ChangeValue(this)" />
+    <input type="button" value="텍스트박스 모양 변경" 
+        onclick="ChangeTextBox();" />
+</div>
+</body>
+</html>

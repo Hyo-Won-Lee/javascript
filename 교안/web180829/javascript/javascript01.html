@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="myscript.js"></script>
+</head>
+<body>
+    <script>
+        var now=new Date();
+        document.write(now);
+        //본인이름을 찍어보자.
+        //본인이름을 h3태그로 찍어보자.
+        document.write("<br>");
+        document.write("park~");
+        document.write("<h3>park~</h3>");
+        console.log("console출력");
+    </script>
+    <p>
+        자바스크립트는 이벤트에 반응할 수 있다.
+    </p>
+    <button type="button" onclick="alert('반갑습니다.')">버튼 클릭</button>
+
+    //변수 name를 선언해서 name를 통해 //본인이름을 메시지박스로 출력하시오.
+    <script>
+        var name="park";
+        //alert(name);
+
+
+        var x;
+        document.write("<br>");
+        document.write(x+"<br>");
+        document.write(x,"<br>");
+        //typeof(x)
+        //x에 타입이 뭔지 리턴한다.
+        //number
+        //정수
+        x=10;
+        document.write(x,"<br>");
+        document.write(typeof(x),"<br>");
+        //실수
+        x=10.992;        
+        document.write(x,"<br>");
+        document.write(typeof(x),"<br>");
+        //boolean  true,false를 값으로 갖음
+        x=true;
+        document.write(x,"<br>");
+        document.write(typeof(x),"<br>");
+
+        s="hello";
+        document.write(s,"<br>");
+        document.write(s.toUpperCase(),"<br>");
+        document.write(s,"<br>");
+        s=s.toUpperCase();
+        document.write(s,"<br>");
+
+        //차 
+        var model="bmz";
+        var color="red";
+        var hp=100;
+
+        //고양이
+        var name="cat";
+        var color="black";
+        
+        //중복된 변수명을 피하기위해서 객체를 선언해 사용
+        //차 car  고양이는 cat이라는 객체에 넣어서 사용해 보자.
+
+        var car={model:"bmz",color:"red",hp:100};
+        var cat={name:"cat",color:"black"};
+
+        document.write(cat.color,"<br>");
+        document.write(car.color,"<br>");
+
+        cat.color="yello";
+        car.hp=90;
+        //강아지 객체를 만들고 이름,색,hp를 넣어
+        //출력해보자.
+        //출력후 값을 바꿔서 다시 출력해보자.
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

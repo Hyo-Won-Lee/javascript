@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+
+	<script>
+	function Student(name,korean,math,english){
+		this.이름=name;
+		this.국어=korean;
+		this.수학=math;
+		this.영어=english;
+	}
+	Student.prototype.getSum=function(){
+		return this.국어+this.수학+this.영어;
+	};
+	Student.prototype.getAverage=function(){
+		return this.getSum()/3;
+	};
+	Student.prototype.toString=function(){
+		return this.이름+":"+this.getAverage();
+	};
+	
+	var student=[];
+	student.push(new Student('김범1',80,94,70));
+	student.push(new Student('김범2',82,93,50));
+	student.push(new Student('김범3',81,90,60));
+	
+	for(var i in student){
+		document.write(student[i]+"<br/>");
+	}
+	document.write(student);
+	</script>
+</head>
+<body>
+</body>
+</html>

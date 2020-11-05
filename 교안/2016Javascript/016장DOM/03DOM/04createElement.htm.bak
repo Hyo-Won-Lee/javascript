@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>createElement : 노드 생성</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            // 노드 생성
+            var pElement = document.createElement("p"); // p 태그
+            var hrElement = document.createElement("hr"); // hr 태그
+
+            // 속성(Attribute) 추가
+            hrElement.setAttribute("title", "DOM을 사용하여 생성된 수평선");
+
+            // 노드 추가 : body
+			document.body.appendChild(hrElement);
+            document.body.appendChild(pElement);
+            
+
+            // 노드 타입
+            // document.write(hrElement.nodeType); // 1 : 요소
+        };
+    </script>
+</head>
+<body>
+    <hr title="직접 태그를 통해서 생성된 수평선" />
+</body>
+</html>

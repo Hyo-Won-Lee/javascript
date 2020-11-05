@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * { border: 3px solid black; }
+    </style>
+    <script>
+        window.onload = function () {
+            // 이벤트를 연결합니다.
+            document.getElementById('header').onclick = function () {
+                alert('header');
+            };
+            document.getElementById('paragraph').onclick = function (e) {
+                // 이벤트 객체를 처리합니다.
+                var event = e || window.event;
+                //브라우저마다 달라서 상위와 같이 표시하였다..
+                //최근에는 함수 방식을 요하는 상태이다.
+
+                // 이벤트 발생을 알립니다.
+                alert('paragraph');
+
+                // 이벤트 전달을 제거합니다.
+                event.cancelBubble = true;  //익스플로러
+                if (event.stopPropagation) {
+                    event.stopPropagation();//이외의 브라우져
+                }
+                //상위 방법들은 지원하지 않는 브라우저에서 예외처리 한것이다.
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">
+        <p id="paragraph">Pagagraph</p>
+    </h1>
+</body>
+</html>

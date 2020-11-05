@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>문서 내의 동일 요소 모두 검색 : document.getElementsByTagName()</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function getElements() {
+            var liTags = document.getElementsByTagName('li'); // li 태그에 대한 그룹을 배열로 반환
+            alert(liTags.length); // 3
+
+            for (var i = 0; i < liTags.length; i++) {
+                //alert(liTags[i]); // object
+                alert(liTags[i].getAttribute("value1")); // value 속성 읽어오기 
+            }
+
+        }    
+    </script>
+</head>
+<body>
+
+    <ul>
+        <li value="0">JavaScript</li>
+        <li value="1">DOM</li>
+        <li value="2">jQuery</li>
+    </ul>
+
+    <ul>
+        <li value="JavaScript">JavaScript</li>
+        <li value="DOM">DOM</li>
+    </ul>
+
+    <input type="button" name="btnGetLength" value="li 태그의 개수" onclick="getElements()" />
+
+</body>
+</html>

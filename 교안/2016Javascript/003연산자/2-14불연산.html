@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        alert(!true);
+        alert(!false);
+		
+		alert(false||true);
+	//나머지 부분구현
+		alert(true&&false);
+		
+		
+		alert(30 > 20 > 10);
+		alert(30 > 20 < 10);
+		
+		alert(30 < 20 == 0);
+		alert(30 > 20 == 1);
+		
+		 alert(30 > 20 && 20 > 10);//비교연산자가 논리연산자보다 연산자가 높다.
+
+
+		 // && 연산자 : 둘 다 참일때에만 참
+		 // || 연산자 : 하나라도 참이면 참
+
+		 // true && true -> true
+		 document.write((10 > 5) && (5 != 3) + "<br />");
+
+		 // true || false -> true
+		 document.write(((10 >= 5) || (5 == 3)) + "<br />");
+
+		 // !false -> true
+		 document.write(!(10 <= 5)); // true
+
+		 var a = 1; var b = 2; var c = 3;
+
+		 document.write("안녕" + 2 + 2 + "<br />"); // 안녕22
+		 document.write("" + 2 + 2 + "<br />"); //22 
+		 document.write("" + (2 + 2) + "<br />"); // 괄호 우선 : 4
+		 document.write(2 + 2 + "" + "<br />"); // 정수 덧셈 : 4
+		 document.write((a = b) == 2, "<br />"); //a(2) : true 
+
+		 document.write(a = b == 1, "<br />"); //a(false)
+		 document.write(
+    b < 35 && b > 1, "<br />"   //true
+);
+
+		 document.write(
+    -2 * 2 + 4 - 2, "<br />" // -2
+);
+
+		 document.write(
+    a < b < c       // 1 < 2 < 3 true(1)/false(0) : true
+);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

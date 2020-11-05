@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    //변수가 배열객체로 선언되면 저장공간은 선언할때 마다 자동 설정한다.
+        var arr = new Array();
+        arr[0] = new Array();//1  //2차원배열
+        arr[1] = new Array();
+        arr[0][0] = 1;//1번 작업을 안해주고 하게되면 어떻게 되는가?
+        //arr[0][0] = new Array(); 3차원 배열
+        arr[0][1] = 2;
+        arr[0][2] = 3;
+        arr[1][0] = 4;
+        arr[1][1] = 5;
+        arr[1][2] = 6;
+
+        alert(arr[0][2]);
+
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = 0; j < arr[i].length; j++) {
+                alert(arr[i][j]);
+            }         
+        }
+        //////////////////////
+
+        var arr2 = [[1, 2, 3], [4, 5, 6]];
+        for (var i = 0; i < arr2.length; i++) {
+            for (var j = 0; j < arr2[i].length; j++) {
+                alert(arr2[i][j]);
+            }
+        }
+		//3차원 배열을 생각해보자
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+/*	function Rectangle(width,height){
+		this.width=width;
+		this.height=height;
+	}
+	Rectangle.prototype.getArea=function(){
+		return this.width*this.height;
+	}
+
+	var rectangle=new Rectangle(5,7);
+	rectangle.width=-2;
+
+	document.write(rectangle.getArea());
+*/
+
+	function Rectangle(w,h){
+		var width=0;
+		var height=0;
+		this.getWidth=function(){return width;};
+		this.getHeight=function(){return height;};
+		this.setWidth=function(w){
+			if(w<0){
+				alert('음수는 입력할수 없습니다.');
+			}else{
+				width=w;
+			}
+		}
+		this.setHeight=function(h){
+			if(h<0){
+				alert('음수는 입력할수 없습니다.');
+			}else{
+				height=h;
+			}
+		}
+		this.width=this.setWidth(w);
+		this.height=this.setHeight(h);
+	}
+	Rectangle.prototype.getArea=function(){
+		return this.getWidth()*this.getHeight();
+	}
+	
+	var rectangle=new Rectangle(5,7);
+	rectangle.setWidth(-2);
+	document.write(rectangle.getArea());
+	
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 변수를 선언합니다.
+        var object = {
+            name: '윤인성',
+            region: '서울특별시'
+        };
+        // 출력합니다.
+        alert(JSON.stringify(object));
+	alert(typeof(JSON.stringify(object)));//string
+	////////////////////////////
+		    // 변수를 선언합니다.
+        var object = {
+            name: '윤인성',
+            region: '서울특별시'
+        };
+
+        var copy = JSON.parse(JSON.stringify(object));
+		alert(typeof(JSON.parse(JSON.stringify(object))));//object
+		alert(typeof(copy));//object
+		
+
+        // 출력합니다.
+        alert(copy.name + ' : ' + copy.region);
+		
+	////////////////////////////////////////////
+		// 메소드 재 정의 사용자가 원하는 형태가 아닌 새로운 형태로 재 정의
+		// toString 
+        var object = {
+            name: 'object',
+            prop: 'object',
+            toJSON: function () {
+                return {
+                    custom: 'custom'
+                };
+            }
+        };
+
+        // 출력합니다.
+        alert(JSON.stringify(object));
+		alert(object);//object를 강제로 String으로 변환 정의되지 않았으니 기본 object라는 문자열이 출력된다.
+		/////////////////////////////////////////////////
+	        var object = {
+            name: 'object',
+            prop: 'object',
+            toJSON: function () {
+                return {
+                    custom: 'custom'
+                };
+            },
+			toString:function(){
+				return ' 재정의 ';
+			}
+        };
+        // 출력합니다.
+        alert(JSON.stringify(object));
+		alert(object);
+		///////////////////////////////////////////////////////////
+        
+		 // 변수를 선언합니다.
+        var text = '  text  ';
+        // 출력합니다.
+        var output = '';
+        output += '++' + text + '++\n';
+        output += '++' + text.trim() + '++';
+        alert(output);
+        //특정 객체가 자동으로 형변환 할때 리턴한다.
+		
+    </script>
+</head>
+<body>
+
+</body>
+</html>

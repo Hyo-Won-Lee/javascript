@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	// prototype 은 중복생성되지 않게 하기위해서 사용
+        // 생성자 함수를 선언합니다.
+	// prototype으로 선언된 값은 얇은 복사 가 이뤄진다.
+	// 따라서 객체로 생성되어야 클래스마다 값이 유지된다.
+	// prototype은 메모리가 공유된다.
+/*       <!Doctype html>
+<html>
+<head>
+
+	<script>
+	function Student(name,korean,math,english){
+		this.이름=name;
+		this.국어=korean;
+		this.수학=math;
+		this.영어=english;
+	}
+	Student.prototype.getSum=function(){
+		return this.국어+this.수학+this.영어;
+	};
+	Student.prototype.getAverage=function(){
+		return this.getSum()/3;
+	};
+	Student.prototype.toString=function(){
+		return this.이름+":"+this.getAverage();
+	};
+	
+	var student=[];
+	student.push(new Student('김범1',80,94,70));
+	student.push(new Student('김범2',82,93,50));
+	student.push(new Student('김범3',81,90,60));
+	
+	for(var i in student){
+		document.write(student[i]+"<br/>");
+	}
+	</script>
+</head>
+<body>
+</body>
+</html>
+*/	//기존 예제를 보고 만들어보자.
+		
+/*
+1.
+function Student(name, korean, math, english, science) {
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+			this.getALL+=1;
+}
+Student.prototype.getALL=10; //객체를 넣어야지 된다.
+Student.prototype.getSum=function(){alert(this.이름)};
+
+var student =new Student('s',3,3,3,3);
+var student =new Student('s1',3,3,3,3);
+student.getSum();
+alert(student.getALL);
+
+
+2.
+function Student(name, korean, math, english, science) {
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+			this.getALL+=1;
+}
+Student.prototype.getALL=10; //객체를 넣어야지 된다. 이값은 객체 생성될때마다 실행된다.
+//따라서 주소를 넣어주어야 연결되어 있는 값이 나온다.
+Student.prototype.getSum=function(){alert(this.이름)};
+
+var student =new Student('s',3,3,3,3);
+var student =new Student('s1',3,3,3,3);
+var student2 =new Student('s2',3,3,3,3);
+student.getSum();
+alert(student.getALL);
+alert(student2.getALL);
+*/
+function Student(name, korean, math, english, science) {
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+	    this.getALL.name+=1;
+}
+Student.prototype.getALL={name: 1};
+Student.prototype.getSum = function () { alert(this.이름) };
+Student.prototype.getSum1 = function () { alert(this.getALL.name) };
+var student1 =new Student('s',3,3,3,3);
+var student2 =new Student('s1',3,3,3,3);
+var student3 =new Student('s1',3,3,3,3);
+
+var varInt=0;
+student1.getSum1();
+alert(student1.getALL.name);
+alert(student2.getALL.name);
+alert(student3.getALL.name);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<script language="javascript" type="text/javascript">
+// 1~100까지 3의 배수이고, 그리고 4의 배수의 합을 구하는 프로그램
+
+var sum = 0;
+
+var i = 1;
+
+// 무한루프
+while (true)
+{
+    if (i % 3 == 0 && i % 4 == 0)
+    {
+        sum += i;
+    }    
+    
+    i++;
+    
+    if (i > 100)
+    {
+        break; // 현재 while문을 빠져나감.    
+    }
+}
+
+document.write(sum + "<br />");
+</script>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.9.2.custom.js"></script>
+   
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            padding:20px;
+            margin:20px;
+            text-align: center;
+            color:red;
+            background-color:lightblue;
+        }
+        .over{
+            width:200px;
+            height:200px;
+            color:blue;
+            background-color:gray;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            //hover
+            $("div").hover(
+                function(){
+                    $(this).addClass('over',1500);
+                },
+                function(){
+                    $(this).removeClass('over',1500);
+                }
+            )
+          
+        });
+    </script>
+</head>
+<body>
+    <div id="box">GoodDay!</div>
+</body>
+</html>

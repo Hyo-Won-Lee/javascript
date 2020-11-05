@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+/*	
+	    ////////////////////////////////////////
+        // 변수를 선언합니다.
+        //상속한 자식에서 keys는 부모에 속성을 검색하지 못하지만 쓸수 없는것은 아닙니다.
+        var object = Object.create({}, {
+            name: { value: '윤인성', enumerable: true },
+            region: { value: '서울특별시', enumerable: true }
+        });
+        // 출력합니다.
+        alert(Object.keys(object));
+		//////////////////////////////////////////////
+		//상속적 의미를 가지는 
+        // 변수를 선언합니다.
+        var object = Object.create({}, {
+            name: { value: '윤인성', enumerable: true },
+            region: { value: '서울특별시', enumerable: true }
+        });
+
+        var person = Object.create(object, {
+            gender: { value: '남자', enumerable: true },
+            hobby: { value: '기타', enumerable: true }
+        })
+
+        // 출력합니다.
+        alert(Object.getOwnPropertyNames(person) + '\n' + Object.keys(person));
+        alert(person.name + ' : ' + person.region);
+
+		/////////////////////////////////////////////////
+		//동적 속성 추가를 제한하는 메소드
+        //간단한 속성추가 방법
+        var object = {};
+
+        // 간단한 객체 속성 추가 방법
+        object.region = '서울특별시';
+
+        // 복잡한 객체 속성 추가 방법
+        Object.defineProperty(object, 'name', {
+            value: '윤인성',
+            writable: false,
+	    //enumerable: true
+        });
+		alert(Object.keys(object));
+		alert(object.name);
+*/		
+		///////////////////////////////////
+		// 변수를 선언합니다.
+        var object = {};
+
+        // 간단한 객체 속성 추가 방법
+        object.region = '서울특별시';
+
+        // 복잡한 객체 속성 추가 방법
+        Object.defineProperty(object, 'name', {
+            value: '윤인성',
+            writable: false
+        });
+		
+//		alert(object.name);
+//		alert(object.dream);
+//		alert(object.showMeTheMoney);
+  //     alert(Object.isExtensible(object));
+       Object.preventExtensions(object);
+//        alert(Object.isExtensible(object));
+
+	//preventExtensions 객체를 실행한 다음에 속성을 추가하면 에러가 난다.
+        // 간단한 객체 속성 추가 방법
+        object.dream = '생명공학자';
+        // 복잡한 객체 속성 추가 방법
+        Object.defineProperty(object, 'showMeTheMoney', {
+            value: true
+        });
+
+		alert(object.name);
+		alert(object.dream);
+		alert(object.showMeTheMoney);
+		
+    	
+    </script>
+</head>
+<body>
+</body>
+</html>

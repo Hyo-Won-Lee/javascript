@@ -1,0 +1,25 @@
+<script language="javascript" type="text/javascript">
+// 반환값(Return Value)이 있는 함수
+
+// 함수 선언
+function Hap(a, b)
+{
+    var c = a + b;
+    return c; // 즉, 넘겨온 2개의 수의 합을 함수 호출쪽으로 전달(반환)
+}
+function Pyung(p)
+{
+    return (p * 3.3);
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+// 함수 호출
+var result = Hap(3, 5);
+document.write(result + "<br />");
+
+document.write( Hap(3, 3) + "<br />");
+
+// Pyung(100); // 100평에 해당하는 제곱미터 : 100평 * 3.3. 330제곱미터
+document.write("500평은 " + Pyung(500) + "제곱미터(m<sup>2</sup>)입니다.<br />");
+</script>

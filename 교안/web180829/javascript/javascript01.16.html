@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    //종료시간-시작시간 =사용시간
+    function checkDate(){
+        //2018-04-22 13:55        
+    //   document.getElementById("pSDate1").value+" "+document.getElementById("pSDate2").value
+
+      //new Date("2018-04-22 13:55")
+      var startTime=new Date(document.getElementById("pSDate1").value+" "+document.getElementById("pSDate2").value);
+      var endTime=new Date(document.getElementById("pSDate3").value);
+      var diff=endTime.getTime()-startTime.getTime();
+      alert(diff/3600000);
+      //3600000 == 1000*60*60
+      //diff가 3600000이면 천원 받으면 됨
+      //diff가 7200000이면 2천원 받으면됨
+
+      
+
+
+    }
+    
+    
+
+</script>
+</head>
+<body>
+시작시간
+<input type="date" id="pSDate1">
+<input type="time" id="pSDate2">
+<br>
+
+종료시간
+<input type="datetime-local" id="pSDate3">
+<br>
+<input type="button" onclick="checkDate()" value="button">
+</body>
+</html>

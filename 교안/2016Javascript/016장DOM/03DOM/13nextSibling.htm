@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>nextSibling, previousSibling : 다음, 이전 형제 노드 반환</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            // first 이후의 div의 값을 N으로 변경
+            var node = document.getElementById('first');
+            while (node) {
+                // 텍스트노드 제외, DIV 태그만...
+                if (node.nodeType !== 3 && node.nodeName === 'DIV') {
+                    node.innerHTML = 'N';
+                }
+                
+                node = node.nextSibling; // 노드를 다음 노드로 초기화(이동)
+            }
+            // last 이전의 div의 값을 P로 변경
+            node = document.getElementById("last");
+            while (node) {
+                if (node.nodeType != 3 && node.nodeName == 'DIV') {
+                    node.innerHTML = 'P';
+                }
+                node = node.previousSibling; // 노드를 이전 노드로 초기화
+            }
+        };
+    </script>
+</head>
+<body>
+    <span>-</span>
+    <div>X</div>
+    <div>X</div>
+    <div id="last">X</div>
+    <div id="first">X</div>
+    <div>X</div>
+    <div>X</div>
+    <span>-</span>
+<!--w3c 돔 문제를 풀어보자. -->
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+       // 함수를 호출합니다.
+        //alert('원래 매개 변수입니다.', '추가된 매개 변수입니다.');
+        //prompt('원래 매개 변수입니다.');
+        /////////////////
+        // 배열을 생성합니다.
+        var array1 = Array();
+        var array2 = Array(10);
+        var array3 = Array(273, 103, 57, 32);
+
+        // 출력합니다.
+        alert(array1);
+        alert(array2);
+        alert(array3);
+
+        ///////////////////
+        // 함수를 생성합니다.
+        function sumAll() {
+            // 출력합니다.
+            alert(typeof (arguments) + ' : ' + arguments.length);
+        }
+
+        // 함수를 호출합니다.
+        sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        ////////////////////
+        // 함수를 생성합니다.
+        function sumAll() {
+            var output = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                output += arguments[i];
+            }
+            return output;
+        }
+
+        // 함수를 호출 및 출력합니다.
+        alert(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 9));
+        ///////////////////////////////
+        //매개변수 개수에 따른 처리방법
+        function 이렇게함수() {
+            // 매개 변수의 개수를 가져옵니다.
+            var length = arguments.length;
+
+            // 조건을 나누어줍니다.
+            if (length == 0) {
+                // 매개 변수가 없을 때
+            } else if (length == 1) {
+                // 매개 변수가 한 개일 때
+            } else {
+                // 매개 변수가 두 개일 때
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

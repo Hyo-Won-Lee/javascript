@@ -1,0 +1,39 @@
+<script language="javascript" type="text/javascript">
+//[1] alert() : 경고 대화 상자
+//window.alert("제일 많이 사용하는 웹브라우저 내장 객체");
+//[2] confirm() : 확인 대화 상자
+/*
+if ( window.confirm("정말로 삭제하시겠습니까?") )
+{
+    alert("삭제되었습니다.");
+}
+else
+{
+    alert("취소되었습니다.");
+}
+*/
+</script>
+<script language="javascript" type="text/javascript">
+//[3] open() : 새로운 창 열기
+function MyWeb()
+{
+    window.open("http://www.hawaso.com/", "hawaso"
+        , "width=200,height=200,scrollbars=no,menubar=yes,status=no,toolbar=yes");
+}
+//[4] close() : 현재 창 닫기
+
+//[5] setTimeout() : 시간차 주기
+//window.setTimeout("alert('꽝!!!')", 3000); // 3초후에 첫번째 매개변수의 명령어 실행
+
+//[6] status 속성 : 상태표시줄(상태바)에 문자열 출력
+function ShowMessage()
+{
+    window.status = "안녕하세요.";
+    window.defaultStatus = "반갑습니다.";
+}
+ShowMessage(); // 호출
+</script>
+
+<input type="button" value="사이트 열기" onclick="MyWeb();" />
+<input type="button" value="현재 창 닫기" onclick="window.close();" />
+

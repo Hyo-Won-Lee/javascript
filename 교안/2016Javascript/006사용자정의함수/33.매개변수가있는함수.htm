@@ -1,0 +1,37 @@
+<script language="javascript" type="text/javascript">
+// 함수 선언
+function Hello(msg)
+{
+    document.write(msg + "<br />");    
+}
+function Say(str, count)
+{
+    for (var i = 0; i < count; i++)
+    {
+        document.write(str + "<br />");
+    }
+}
+function Hap(start, end, num)
+{
+    var sum = 0;
+    for (var i = start; i <= end; i++)
+    {
+        if (i % num == 0)
+        {
+            sum += i;
+        }    
+    }
+    document.write(
+        start + "부터 " + end + "까지의 정수 중 " + num + "의 배수의 합 : " + sum + "<br />");
+}
+</script>
+<script language="javascript" type="text/javascript">
+// 함수 호출
+Hello("안녕"); Hello("방가"); Hello("또봐");
+Say("안녕하세요.", 5); Say("반갑습니다.", 3);//안녕하세요를 5번 출력
+Hap(10, 50, 3); // 10부터 50까지 3의 배수의 합을 구하는 함수
+Hap(1, 100, 2); // 1부터 100까지 2의 배수의 합이 얼마인지 출력
+Hap(1, 1000, 7); // 재사용
+// Table('id'); Top('id')
+</script>
+

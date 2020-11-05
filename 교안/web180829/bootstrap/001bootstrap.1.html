@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <style>
+        .container{
+            background-color:red;
+        }
+        @media(max-width:400px){
+            .container{
+                /* 400보다 작아지면 노랑색 */
+                background-color:yellow;
+            }   
+        }
+        @media(min-width:400px) and (max-width:800px){
+            .container{
+                /* 800보다 작아지면 노랑색 */
+                background-color:blue;
+            } 
+
+        }
+     
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        width가 최대 800보다 작은경우만
+        .container 적용
+    </div>
+    
+</body>
+</html>

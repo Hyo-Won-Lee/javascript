@@ -1,0 +1,149 @@
+﻿<!Doctype html>
+<html>
+<head>
+	<script>
+	function Student(){
+	}
+
+	//Student();
+	var student=new Student();
+
+	function Student(name,korean,math,english){
+		this.이름=name;
+		this.국어=korean;
+		this.수학=math;
+		this.영어=english;
+		return this;
+	}
+
+	var student1= new Student('park1',86,79,87);
+	var student2= new Student('park2',86,79,85);
+	
+
+	alert(window.student1.이름);
+	alert(window.이름);
+	alert(window.student2.이름);
+	alert(window.이름);
+
+
+	var student1= Student('park1',86,79,87);
+	var student2= Student('park2',86,79,85);
+	
+
+	alert(window.student1.이름);
+	alert(window.이름);
+	alert(window.student2.이름);
+	alert(window.이름);
+
+
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	/////////생성자함수 생성방법
+	function Student() {
+
+        }
+
+        var student = new Student();
+		
+		///////////1. 생성자함수 속성 구현
+        function Student(name, korean, math, english, science) {
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+        }
+		
+	   ///////////2.생성자함수 메소드 구현
+        var student = new Student('윤하린', 96, 98, 92, 98);
+		alert("a"+student.과학);
+        function Student(name, korean, math, english, science) {
+            // 속성
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+
+            // 메서드
+            this.getSum = function () {
+                return this.국어 + this.수학 + this.영어 + this.과학;
+            };
+            this.getAverage = function () {
+                return this.getSum() / 4;
+            };
+            this.toString = function () {
+                return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage();
+            };
+        }
+
+        var student = new Student('윤하린', 96, 98, 92, 98);
+		
+		//////생성자함수 배열 생성
+		  // 학생 정보 배열을 만듭니다.
+        var students = [];
+        students.push(new Student('윤인성', 87, 98, 88, 95));
+        students.push(new Student('연하진', 92, 98, 96, 98));
+        students.push(new Student('구지연', 76, 96, 94, 90));
+        students.push(new Student('나선주', 98, 92, 96, 92));
+        students.push(new Student('윤아린', 95, 98, 98, 98));
+        students.push(new Student('윤명월', 64, 88, 92, 92));
+        students.push(new Student('김미화', 82, 86, 98, 88));
+        students.push(new Student('김연화', 88, 74, 78, 92));
+        students.push(new Student('박아현', 97, 92, 88, 95));
+        students.push(new Student('서준서', 45, 52, 72, 78));
+
+/*THIS 를 리턴하면 ARRAY()로 생성할수 있다
+        // 출력합니다.TT
+        var output = '이름\t총점\t평균\n';
+        for (var i in students) {
+            output += students[i].toString() + '\n';
+        }
+        alert(output);
+		
+		function Student(name, korean, math, english, science) {
+            this.이름 = name;
+            this.국어 = korean;
+            this.수학 = math;
+            this.영어 = english;
+            this.과학 = science;
+			
+			return this;
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+//window는 전역객체처럼 취급된다.
+function a(){
+	var 이름='100';
+	//이름 ='100';
+	alert("window"+this.이름);
+	alert("window"+이름);
+	alert("window"+window.이름);
+}
+a();
+-->

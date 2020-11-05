@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>이벤트</title>
+</head>
+<body onload="window.alert('어서오세요.');"
+    onunload="alert('안녕히가세요...');">
+<input type="text" 
+    onfocus="this.style.backgroundColor='yellow';" 
+    onblur="this.style.backgroundColor='white';" 
+    onchange="document.bgColor='silver';"    
+/>
+<input type="text" onkeypress="alert('타이핑하셨군요.');"
+    onmousemove="this.style.backgroundColor='yellow';" />
+<table border="1" width="100%">
+    <tr>
+        <td onclick="alert('클릭하셨군요.');">클릭</td>
+        <td onmouseover="alert('오버하셨군요.');">마우스오버</td>
+    </tr>
+    <tr>
+        <td ondblclick="alert('더블클릭하셨군요.');">더블클릭</td>
+        <td onmouseout="alert('밖으로 이동하셨군요.');">마우스아웃</td>
+    </tr>
+</table>
+</body>
+</html>

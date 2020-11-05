@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        ////////////////////////////////////////
+        // 3초 후에 함수를 실행합니다.
+        setTimeout(function () {
+            alert('3초가 지났습니다. ㅇㅂㅇ');
+        }, 3000);
+        ///////////////////////////////////////////////////
+        // 1초마다 함수를 실행합니다.
+        var intervalID = setInterval(function () {
+            alert('<p>' + new Date() + '</p>');
+        }, 1000);
+
+        // 10초 후 함수를 실행합니다.
+        setTimeout(function () {
+            // 타이머를 종료합니다.
+            clearInterval(intervalID);
+        }, 10000);
+        ////////////////////////////////////////////
+        alert('A');
+        setTimeout(function () {
+            alert('B');
+        }, 0);
+        alert('C');
+        ////////////////////////////////////////////
+        setTimeout(function () {
+            alert('Set Timeout');//영원히 실행되지 않음
+        }, 0);
+
+        while (true) { }
+        /////////////////////////////////////
+        //모두 실행된다음에 함수가 실행됨
+        //크로저 값을 생각해보자 함수가 리턴되서 0,1,2 값이 리턴되는것이 아니고 변수가 리턴된다 
+        //따라서 결과는 함수가 실행될때 가지고 있는 변수값이다.
+        for (var i = 0; i < 3; i++) {
+            setTimeout(function () {
+                alert(i);
+            }, 0);
+        }
+        ////////////////////////////////////////
+        //상위에 분리된 변수와
+        for (var i = 0; i < 3; i++) {
+            (function (closed_i) {
+                setTimeout(function () {
+                    alert(closed_i);
+                }, 0);
+            })(i)
+        }
+
+        ////////////////////////////////
+        for (var i = 0; i < 3; i++) {
+            (function () {
+                setTimeout(function () {//모
+                    alert(i);
+                }, 0);
+            })(i)
+        }
+        ////////////////////내부에 i가 선언되어서 재정의된 i 이다. 알람에 i는 for문에 i가 아니다.
+        for (var i = 0; i < 3; i++) {
+            (function (i) {
+                setTimeout(function () {
+                    alert(i);
+                }, 0);
+            })(i)
+        }
+        ////////////////
+        //explore에서 안됨
+        [0, 1, 2].forEach(function (i) {
+            setTimeout(function () {
+                alert(i);
+            }, 0);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

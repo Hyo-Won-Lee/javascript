@@ -1,0 +1,45 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+function CheckForm(){
+	var txtUserID=document.FrmLogin.txtUserID;
+	if(txtUserID.value==""||
+!(txtUserID.value.length>=3&&txtUserID.value.length<12)){
+		alert("값을 입력하세요");
+		document.FrmLogin.txtUserID.focus();
+		document.getElementById('txtUserID').select();	
+	}else{
+		document.FrmLogin.action="http://www.naver.com";
+		document.FrmLogin.submit();
+	}
+
+}
+	</script>
+</head>
+<body>
+	<form id='FrmLogin' name='FrmLogin' 
+		action='http://www.naver.com' method='post'>
+		<div align="center">
+<table border='1' width='300'>
+<tr>
+<td>아이디:</td>
+<td><input type='text' id='txtUserID' name='txtUserID'/>
+</td>
+</tr>
+<tr>
+<td>암호:</td>
+<td><input type='password' id='txtPassword' name='txtPassword'/>
+</td>
+</tr>
+<tr>
+<td colspan='2' align='center'>
+	<input type='button' value='로그인' onclick='CheckForm();'/>
+	<input type='reset' value='취소' />
+</td>
+</tr>
+</table>		
+		</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<script language="javascript" type="text/javascript">
+//[1] href 속성 : 지정된 URL로 이동
+GoGo = function() 
+{
+    location.href = "http://www.VisualAcademy.com/";
+}
+
+//[2] reload() 메서드 : 현재 페이지 새로고침
+function ReFresh()
+{
+	
+    location.reload(); 
+    return true; // true을 반환하면, 버튼의 기능을 계속 실행 그렇지 않으면 이벤트 멈춤
+}
+
+//[3] 응용 : 3초 후에 지정된 URL로 이동하는 함수
+function GoUrl(url)
+{
+    window.setTimeout("location.href='" + url + "'", 3000);
+}
+</script>
+
+<input type="button" value="사이트로 이동" onclick="GoGo();" />
+
+<input type="button" value="새로고침" onmouseover="return ReFresh();" />
+
+<input type="button" value="닷넷코리아로 이동" 
+    onclick="GoUrl('http://www.dotnetkorea.com/')" />
+<input type="button" value="하와소로 이동" 
+    onclick="GoUrl('http://www.hawaso.com/')" />
+
+
+<script language="javascript" type="text/javascript">
+    GoBack = function () { history.back(); }
+
+    GoForward = function () { history.forward(); }
+
+    function GoBack1() { history.go(-1); }
+</script>
+
+<input type="button" value="뒤로" onclick="GoBack();" />
+
+<br />
+
+<a href="#" onclick="GoForward();">앞으로</a>
+
+<br />
+
+<input type="button" value="한단계 뒤로" onclick="history.go(-1);" />
+
+<br />
+
+<a href="javascript:GoBack1()">한단계 뒤로</a>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>재귀(Recursion)</title>
+    <script type="text/javascript">
+        // 재귀를 사용한 Factorial 구하기
+//        function factorialOld(n) {
+//            var result = 1;
+//            for (var i = 1; i <= n; i++) {
+//                result *= i;
+//            }
+//            return result;
+//        }
+        // 재귀 함수
+        function factorial(n) {
+            // 종료
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            // 재귀 호출
+            return n * factorial(n - 1); // 3 * 2 * 1
+        }
+        function fact(n) {
+            return (n > 1) ? n * fact(n - 1) : 1;
+        }
+        document.write(factorial(3) + "<br />"); // 3 * 2 * 1 = 6
+        document.write(factorial(4) + "<br />"); // 4 * 3 * 2 * 1 = 24
+        document.write(fact(4)); // 4 * 3 * 2 * 1 = 24
+    </script>
+</head>
+<body>
+
+</body>
+</html>

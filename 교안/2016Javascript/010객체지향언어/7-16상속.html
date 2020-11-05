@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+		<script>
+        // 정사각형 넓이를 구하는 함수를 만들어 보자
+		// 이전에 정의한 함수를 생각해보자.
+        function Square(length) {
+            this.width = length;
+            this.height = length;
+        }
+
+        Square.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };
+    </script>
+    <script>
+        // 생성자 함수를 선언합니다.
+        function Rectangle(w, h) {
+            // 변수를 선언합니다.
+            var width = w;
+            var height = h;
+
+            // 메서드를 선언합니다.
+            this.getWidth = function () { return width; };
+            this.getHeight = function () { return height; };
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '길이는 음수일 수 없습니다.';
+                } else {
+                    width = w;
+                }
+            };
+
+            this.setHeight = function (h) {
+                if (w < 0) {
+                    throw '길이는 음수일 수 없습니다.';
+                } else {
+                    height = h;
+                }
+            };
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };
+    </script>
+    <script>
+		// 직각삼각형구현 소스를 이용하면 쉽게 작성할 수 있다.
+        // 생성자 함수를 선언합니다.
+        function Square(length) {
+            this.base = Rectangle;
+            this.base(length, length);
+        }
+
+        Square.prototype = Rectangle.prototype;
+        Square.prototype.constructor = Square;
+		
+		        // 생성한 객체를 구현해 본다.
+        var rectangle = new Rectangle(5, 7);
+        var square = new Square(5);
+        alert(rectangle.getArea() + ' : ' + square.getArea());
+		
+		
+		 //instanceof true를 리턴한다.
+        var square = new Square(5);
+        alert(square instanceof Rectangle);
+		
+		//상속을 이용해 직육면체 넓이를 구하는 객체를 만들자.
+		//상속을 이용해 삼각형 넓이와 삼각기둥 부피를 구하는 객체를 만들어 보자
+    </script>
+</head>
+<body>
+
+</body>
+</html>

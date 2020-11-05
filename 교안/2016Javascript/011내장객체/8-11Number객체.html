@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	//////number객체 생성하는 2가지 방법
+        // 변수를 선언합니다.
+        var numberFromLiteral = 273;
+        var numberFromConstructor = new Number(273);
+
+        // 출력합니다.
+        alert(typeof (numberFromLiteral));
+        alert(typeof (numberFromConstructor));
+		/////////////////////////////////
+        var number = 273.5910332;
+
+        // 출력합니다.
+        var output = '';
+        output += number.toFixed(1) + '\n';
+        output += number.toFixed(4);
+        alert(output);
+		
+		 // 변수를 선언합니다.
+        var fixedNumber = (273.5210332).toFixed(2);
+        //var fixedNumber = (273.5210332).toFixed(-2); error가 난다.
+		
+
+        // 출력합니다.
+        alert(fixedNumber);
+
+        /////////        // 생성자 함수는 속성을 가진다.
+	//함수도 객체여서 이름으로 변수와 숫자를 넣는 변수를 선언할 수 있다.
+        //213Page
+        function Constructor() { }
+        Constructor.property = 273;
+        Constructor.method = function () { };
+
+        // 출력합니다.
+        alert(Constructor.property);
+		///////////////////////////////////////////
+
+    function Constructor() { alert("f")}
+        Constructor.property = 273;
+        Constructor.method = function () { alert("Method")};
+
+        // 출력합니다.
+        alert(Constructor.property);
+	Constructor();
+	Constructor.method();
+
+		///////////////////////////////////////////
+		///////////////////////////////////////////
+		//지수표시
+		
+        var number = Number.MAX_VALUE + 1;
+
+        // 출력합니다.
+        alert(number);
+		//////////////////////////////////////////
+		 // 변수를 선언합니다.
+        var addNumber = Number('0.0000000000000001e+308');
+        var number = Number.MAX_VALUE + addNumber;
+
+        // 출력합니다.
+        alert(number);
+		
+    </script>
+</head>
+<body>
+
+</body>
+</html>

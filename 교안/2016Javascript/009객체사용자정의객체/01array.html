@@ -1,0 +1,103 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+
+	document.write(typeof([]));
+	var array=['사과','바나나','망고','딸기'];
+	document.write("<br>");
+	document.write(array);
+	document.write("<br>");
+	array[0]='과자';
+	array[1]='과자2';
+	document.write("<br>");
+	document.write(array);
+	document.write("<br>");
+	//json
+	var product={
+		제품명:'3d 망고',
+		유형:'당절임',
+		성분:'망고,설탕,설탕,설탕',
+		원산지:'필리핀',
+		'with space':273,
+		'with ~!@#$':52	
+	}
+
+	product["제품명"]='4d 망고';
+	product.제품명='5d 망고';
+
+	
+
+	document.write(product.제품명);
+	document.write("<br>");
+	
+	var object={
+		number:273,
+		string:'RintfIanTta',
+		boolean:true,
+		array:[52,273,103,32],
+		method:function(){},
+		obj:{}
+	};
+
+	document.write("<br>");
+	var person={
+		name:'Park',
+		eat:function(food){}
+	};
+
+	var person={
+		name:'Park',
+		eat:function(food){
+			document.write(this.name +'이'
+			+food+'를 먹습니다.');
+		}
+	};
+	document.write("<br>");
+	person.eat('밥');
+	document.write("<br>");
+	for(var key in product){
+		document.write(key+':'+product[key]+
+		"<br/>");
+	}
+	document.write("<br>");
+	document.write('제품명' in product);
+	document.write("<br>");
+	document.write('제품명1' in product);
+	document.write("<br>");
+	with(product){
+		document.write(제품명);
+		document.write("<br>");
+		document.write(유형);
+		document.write("<br>");
+		document.write(성분);
+		document.write("<br>");
+	}
+
+	var product={
+		제품명:'3d 망고',
+		유형:'당절임',
+		성분:'망고,설탕,설탕,설탕',
+		원산지:'필리핀',
+		'with space':273,
+		'with ~!@#$':52	
+	}
+
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+
+
+
+	document.write("end");
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+ <head>
+  <title>Document</title>
+ </head>
+ <body>
+ <script src="board.js"></script>
+ <script src="block.js"></script>
+ <script src="aBlock.js"></script>
+ <script>
+ 
+///////////////
+var BlockStyle=0;
+var BlockRotate=0;
+
+var level=1000;
+
+document.body.innerHTML=Board.madeBoard();
+
+for(var i=0;i<Board.totalX;i++){
+	for(var j=0;j<Board.totalY;j++){
+		Board.changeColor(i,j,"yellow");
+	}
+}
+
+
+var timer=setInterval(function(){
+
+				if(aBlock.isMove(aBlock.nowX,aBlock.nowY+1)){
+					aBlock.nowDeleteBlock();
+					aBlock.nowY=aBlock.nowY+1;
+					aBlock.nowDrowBlock();
+				}else
+				{
+					//블럭배열에 블록위치를 기록한다.
+					
+
+					
+					aBlock.newArrayBlock();
+					//새로운 블록을 생성한다.
+					aBlock.newMadeBlock();
+					//블록 삭제....
+					//aBlcok.newArrayDelete();
+					
+
+				}
+					
+	
+	/*
+	//alert( BlockStyle+":"+BlockRotate );
+	for(var i=0;i<4;i++){
+	for(var j=0;j<4;j++){
+		if(Block.BlockType[BlockStyle][BlockRotate][i][j]==0){
+					Board.changeColor(i,j,"white");
+		}else if(Block.BlockType[BlockStyle][BlockRotate][i][j]==1){
+
+					Board.changeColor(i,j,"red");
+		}
+	}
+	}
+	BlockRotate++;
+	if(BlockRotate==4){
+		BlockRotate=0;
+		BlockStyle++;
+		if(BlockStyle==7){ 
+			//타이버를 멈춤
+			//break;
+			BlockRotate=0;
+			BlockStyle=0;
+		}
+	}*/	
+},level);
+
+function levelup(){
+	
+	clearInterval(timer)
+	level=level-100;
+	timer=setInterval(function(){
+					aBlock.nowDeleteBlock();
+				if(aBlock.isMove(aBlock.nowX,aBlock.nowY+1)){
+					aBlock.nowY=aBlock.nowY+1;
+				}					
+					aBlock.nowDrowBlock();
+	
+	},level);
+}
+
+
+aBlock.arrayInit();
+aBlock.newMadeBlock();
+aBlock.nowDrowBlock();
+window.onkeypress=function(e){
+	
+	switch(e.charCode)
+	{
+		case 53:
+		aBlock.nowDeleteBlock();
+		aBlock.nowRotate=((aBlock.nowRotate+1)%4);
+
+		if(aBlock.isMove(aBlock.nowX,aBlock.nowY)){
+
+		}else{
+			aBlock.nowRotate=aBlock.nowRotate-1;
+			if(aBlock.nowRotate<0)aBlock.nowRotate=3;
+		}
+
+		aBlock.nowDrowBlock();
+		 
+			//53   bLOCKROTATE
+		break;
+
+		case 52:
+				aBlock.nowDeleteBlock();
+				if(aBlock.isMove(aBlock.nowX-1,aBlock.nowY)){
+					aBlock.nowX=aBlock.nowX-1;
+				}
+				aBlock.nowDrowBlock();
+					//52   BlockLeft
+
+		break;
+		case 54:
+				aBlock.nowDeleteBlock();
+				if(aBlock.isMove(aBlock.nowX+1,aBlock.nowY)){
+				aBlock.nowX=aBlock.nowX+1;
+				}
+
+						aBlock.nowDrowBlock();
+					//54   BlockRight
+		break;	
+		case 50:
+				aBlock.nowDeleteBlock();
+								if(aBlock.isMove(aBlock.nowX,aBlock.nowY+1)){
+						aBlock.nowY=aBlock.nowY+1;
+				}
+
+								aBlock.nowDrowBlock();
+			//50   BlockDown
+		break;			
+	}
+	
+	//alert(e.charCode);
+
+
+
+
+	
+
+}
+//alert(Block.BlockType[0][0][0][20]);
+
+//매개변수 3개 1번 x좌변 2번y좌표 3번은 색상
+//입력받은 테이블의 색삭을 변경하는 함수를 만드시요.
+//ChangeColor(x,y,color)
+ </script>
+  
+ </body>
+</html>
+
+
+

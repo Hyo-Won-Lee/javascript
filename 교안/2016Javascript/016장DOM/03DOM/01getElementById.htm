@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>요소 검색 : getElementById()</title>
+    <style type="text/css">
+        #myDiv { border:1px solid blue; width:200px; height:100px; }
+    </style>
+    <script type="text/javascript">
+        // 페이지 로드 이벤트
+        window.onload = Page_Load;
+
+        function Page_Load() {
+            // btnChange라는 id를 갖는 버튼의 클릭 이벤트 부여
+            var btnChange = document.getElementById("btnChange");
+            btnChange.onclick = function () {
+                var myDiv = document.getElementById("myDiv");
+                myDiv.style.backgroundColor = 'yellow';
+                myDiv.style.width = parseInt("400") + "px";
+                myDiv.style.height = (parseInt(myDiv.style.height.replace("px", "")) + 50) + "px";
+
+                // strHi <span> 태그만 변경
+                document.getElementById("strHi").style.color = 'red';
+            };
+        }
+    </script>
+</head>
+<body>
+    <div id="myDiv" style="height:100px;">
+        <span id="strHi">안녕</span>하세요.
+    </div>
+    <input type="button" id="btnChange" name="btnChange" value="스타일 변경" />
+</body>
+</html>

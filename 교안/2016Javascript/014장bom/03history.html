@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+
+function GoForward(){
+	history.forward();
+}
+function GoBack(){
+	history.back();
+}
+function GoGo(){
+	location.href="http://www.naver.com";
+	
+}
+function ReFresh(){
+	location.reload();
+	return true;//true을 반환하면, 버튼의 기능을 계속실행
+}
+function GoUrl(url,timeNum){
+	window.setTimeout("location.href='"+url+"'"
+		,timeNum);
+}
+function GoMove(moveNum){
+	history.go(moveNum);
+	//history.go(-2);history.go(2);
+}
+GoGo();
+	</script>
+</head>
+<body>
+<a href='#' onclick="GoForward();">앞으로</a>
+<a href='#' onclick="GoBack();">뒤로</a>
+<a href='#' onclick="GoForward();">앞으로</a>
+<a href='#' onclick="GoForward();">앞으로</a>
+<a href='#' onclick="GoForward();">앞으로</a>
+	
+</body>
+</html>

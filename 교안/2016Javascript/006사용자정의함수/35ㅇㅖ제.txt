@@ -1,0 +1,19 @@
+10X10, 정사각형, td의색을 하얀색으로 한 id가 "x"+x+"y"+y형태의 
+table를 만들고 x,y좌표와 색상을 입력받아 원하는 td의 색을 변경하는
+함수를 만드시요.
+
+
+function ChangeColor(x,y,color){
+	document.getElementById("x"+x+"y"+y+"").bgColor=color;
+};
+
+ex)
+ChangeColor(3,2,red)
+테이블의 td ID가 x3y2인 함수를  구하시오.
+
+
+
+
+changeColor함수를 이용해서
+테트릭스 벽돌을 여러개 그려보자.
+

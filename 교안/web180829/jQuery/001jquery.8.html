@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.9.2.custom.js"></script>
+   
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            padding:20px;
+            margin:20px;
+            text-align: center;
+            color:red;
+            background-color:lightblue;
+        }
+        .over{
+            width:200px;
+            height:200px;
+            color:blue;
+            background-color:gray;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#my_form").submit(function(e){
+                var name=$("#name").val();
+                var password=$("#password").val();
+                var str=name+":"+password;
+                if(name!=""&&password!=""){
+                    //데이터 전송
+                    alert(str);
+                }else{
+                    //전송막기
+                    alert("데이터 입력하세요");
+                    e.preventDefault();
+                }
+
+            });
+            
+        });
+    </script>
+</head>
+<body>
+   <form id="my_form" action="http://www.daum.net">
+       <input type="text" name="name" id="name"/><br>
+       <input type="password" name="password" id="password"/><br>
+       <input type="submit" value="제출"/><br>
+   </form>
+</body>
+</html>

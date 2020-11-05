@@ -1,0 +1,39 @@
+<script language="javascript" type="text/javascript">
+// 변수 선언
+var a;
+// 변수 초기화(할당)
+a = "안녕<br />";
+// 변수 참조(사용)
+document.write(a);
+document.write(a);
+
+
+//자료형이 하나밖에 없다.  일반적으로 자동형변환 되지만 원하는 결과를 보장받고 싶으면 사용자가 형변환하여 사용하여야한다.
+// 변수를 선언과 동시에 초기화
+var intNum = 100; // 정수형
+var dblSu = 12.34; // 실수형
+var blnFlag = true; // 불린값(참 또는 거짓) : true/false
+var objNothing = null; // 널값 : 아무것도 아닌 값(빈값(Empty)과 다르다)
+var objthing = {};  //  값을 가지고 있는 객체
+//var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+var strHello = "안녕하세요."; // 문자열 : 큰 따옴표 또는 작은 따옴표로 묶는다.
+var functionVar = function () { };
+//functionVar.toString = "hello";
+//functionVar.toString = function () { return "hello"; };
+//var cars = ["Saab", "Volvo", "BMW"];
+
+// 사용(참조)
+document.write( intNum + intNum + "<br />" ); // 200
+document.write( dblSu + intNum + "<br />" ); // 112.34
+document.write( blnFlag + "<br />" ); // true
+document.write(objNothing + "<br />"); // null
+document.write(objthing + "<br />"); // null
+document.write(strHello + "<br />"); // 안녕하세요.
+document.write(functionVar + "<br />"); // 안녕하세요.
+/*
+--화면에는 문자열 밖에 찍을 수 없다 선언된 자료형들이 자동형변환되어 찍힌것이다.
+--어떻게 자동형변환되는가?
+--문자로 자동형변환할때는 toString()함수가 실행된다.*/
+
+</script>
+

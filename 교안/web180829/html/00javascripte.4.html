@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--자바스크립트 사용방법
+    1. 행내장형(inline)
+        html코드안에서 자바코드 실행
+        대표적으로 이벤트에서 많이사용
+    2. 내장형
+        script 태그를 사용하는 방법
+    3. 외장형
+        자바스크립트 파일을 따로 생성해서 사용
+    -->
+    <title>4. 유효성검사(잘못된사용자입력을 걸러냄)</title>
+    <script>
+        function myFunction(){
+            var x=document.getElementById("numb").value;
+            //alert(x);
+            //isInfinity ?
+            if(isNaN(x)){
+                alert("숫자가아님");
+            }else{
+                //1하고 10 사이 숫자만 정상 출력
+                alert("숫자");
+                if(x<1||x>10){
+                    alert('비정상');
+                }else{
+                    alert('정상');
+                }
+                
+            }
+
+            
+        }
+      
+    </script>
+    
+</head>
+<body>
+    <input id="numb" type="text">
+    <button type="button" onclick="myFunction()">click me!</button>
+    <p id="demo"></p>
+    
+</body>
+</html>

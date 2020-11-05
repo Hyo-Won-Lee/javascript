@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>전역 변수(Global Variable)</title>
+    <script type="text/javascript">
+        function print(msg) {
+            document.write(msg + "<br />");
+        }
+        // 함수 선언
+        function sum(first, second) {
+            var testV = 10;
+
+            testV = 20;
+            print(testV);
+            print(this.testV);
+            print(window.testV);
+            /// <summary>
+            /// 두 수의 합계
+            /// </summary>
+            /// <param name="first" type="Integer">
+            /// 첫번째 수
+            /// </param>
+            /// <param name="second" type="Integer">
+            /// 두번째 수
+            /// </param>
+            temp = first; // var 키워드 빼고 => 전역변수
+            return (temp + second);
+        }
+        // 함수 호출
+        document.write(sum(3, 5) + "<br />"); // 8
+        print(temp); // ?
+        print(sum(30, 50)); // 80
+        print(temp); // 30
+        print(window.temp); // 전역변수는 window객체의 속성(필드)로 표현
+        if (!window.temp) {
+            print("temp 변수가 정의되지 않음");
+        }
+        else {
+            print("temp 변수가 정의됨 : " + window.temp);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

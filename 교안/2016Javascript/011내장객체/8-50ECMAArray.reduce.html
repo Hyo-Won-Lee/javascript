@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // REDUCE() 배열의 요소가 하나가 될 때까지 요소를 왼쪽부터 두개씩 묶는 함수를 실행
+		//REDYCERIGHT() 배열의 요소가 하나가 될 때까지 요소를 오른쪽부터 두개씩 묶는 함수를 실행합니다.
+        var array = [1, 2, 3, 4, 5];
+
+        // 출력합니다.
+        var output = '';
+        array.reduce(function (previousValue, currentValue, index, array) {
+            output += previousValue + ' : ' + currentValue + ' : ' + index + '\n';
+        });
+	//리턴값이 없어서 previousValue에 undefined가 찍힌다.
+        alert(output);
+        ///////////////////////////////////	   
+        var array = [1, 2, 3, 4, 5];
+
+        // 출력합니다.
+        var result = array.reduce(function (previousValue, currentValue) {
+            return previousValue + currentValue;
+        });
+        alert(result);
+	   ////////////////////////////////
+	var output = '';
+		var result = array.reduce(function (previousValue, currentValue, index, array) {
+			output += previousValue + ' : ' + currentValue + ' : ' + index + '\n';
+			alert(array);
+			return previousValue+currentValue ;
+        });
+		alert(output);
+
+		////////////////////////////////
+		// alert(output);
+		var output = '';
+        array.reduceRight(function (previousValue, currentValue, index, array) {
+            output += previousValue + ' : ' + currentValue + ' : ' + index + '\n';
+        });
+alert(output);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Call by value, Call by reference</title>
+    <script src="print.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // 기본 타입 : Call by value(값 전달)
+        var hi = "안녕하세요."; // 문자열, 숫자, ...
+        // 객체 타입 : Call by reference(참조 전달)
+        var obj = { name:"박용준" };
+
+        // 거꾸로 함수
+        function reverseFunc(str) {
+            str = str.split('').reverse().join(' ');
+            return str;
+        }
+        function reverseFuncObject(obj) {
+            obj.name = reverseFunc(obj.name);
+            return obj;
+        }
+
+        // 페이지 로드 이벤트 잡기
+        window.onload = function () {
+            print(reverseFunc(hi)); // .요세하녕안 
+            print(hi); // 안녕하세요.
+
+            print(reverseFuncObject(obj).name); // 준용박
+            print(obj.name); // ?
+        };
+    </script>
+</head>
+<body>
+    <span id="message"></span>
+</body>
+</html>

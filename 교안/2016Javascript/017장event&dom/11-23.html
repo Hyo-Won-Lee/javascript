@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * { border: 3px solid black; }
+    </style>
+    <script>
+	//이벤트 버블링은 자식 노드에서 부모 노드순으로 이벤트를 실행하는것
+	//반대의미로 이벤트 켑쳐링이 있다.
+    </script>
+</head>
+<body>
+    <div onclick="alert('outer-div')">
+        <div onclick="alert('inner-div')">
+            <h1 onclick="alert('header')">
+                <p onclick="alert('pagagraph')">Pagagraph</p>
+            </h1>
+        </div>
+    </div>
+</body>
+</html>

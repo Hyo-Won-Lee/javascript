@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>INDEX</title>
+    <script>
+        window.onload = function () {
+			//textnode를 가지지 않는 대표적인 객체 img
+            // 변수를 선언합니다.
+            var img = document.createElement('img');
+
+            // 노드를 연결합니다.
+            document.body.appendChild(img);
+			
+			//문서 정적 생성과 동적생성 비교
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+

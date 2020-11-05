@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>노드 복사 : cloneNode</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div { border:1px solid red; height:50px; }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var hrTag = document.createElement("hr");
+            document.body.appendChild(hrTag);
+
+            var divTag = document.createElement("div");
+            var divText = document.createTextNode("안녕하세요.");
+            divTag.appendChild(divText);
+            document.body.appendChild(divTag);
+
+            // cloneNode() : 이미 생성된 노드를 복사
+            var divTag2 = divTag.cloneNode(false); // false : 해당 노드만 복사, true : 자식 노드 포함
+            document.body.appendChild(divTag2);
+
+            var hrTag2 = hrTag.cloneNode(true);
+            document.body.appendChild(hrTag2);
+
+        };
+    </script>
+</head>
+<body>
+    <hr />
+
+</body>
+</html>

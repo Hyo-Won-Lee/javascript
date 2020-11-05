@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul{display:inline-block;}
+        li{
+            float:left;
+            list-style:none;
+            width:120px;
+        }
+        li a{
+            display:block;
+            padding:15px 0;
+            width:120px;
+            text-align:center;
+            font:bold 14px "맑은 고딕";
+            text-decoration:none;
+            background:#f90;
+            color:#fff;
+        }
+        li div div{
+            display:none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.9.2.custom.js"></script>
+   
+    <script>
+        $(document).ready(function(){
+            //$("li div div").hide();
+            $("ul>li>div").hover(
+                function(){
+//마우스가 올라오면 data-bg에 선언한 색으로 변경함
+//prop는 반드시 html 속성만 사용가능
+var overColor=$(this).children("a").attr("data-bg");                 
+ $(this).children("a").stop().animate({"background-color":overColor},300);   
+ $(this).children("div").slideDown();
+
+                },function(){
+ $(this).children("a").stop().animate({"background-color":"#f90"},300);   
+ $(this).children("div").slideUp();
+                }
+            )
+           
+//             $("li a").hover(
+//                 function(){
+// //마우스가 올라오면 data-bg에 선언한 색으로 변경함
+// //prop는 반드시 html 속성만 사용가능
+// var overColor=$(this).attr("data-bg");                 
+// $(this).stop().animate({"background-color":overColor},300);   
+// $(this).next("div").slideDown();
+
+//                 },function(){
+// $(this).stop().animate({"background-color":"#f90"},300);   
+// $(this).next("div").slideUp();
+//                 }
+//             )
+           
+        });
+    </script>
+
+</head>
+<body>
+    <div  style="position:relative;height:70px;z-index: 2;">
+        <ul>
+            <li><div><a href="#" data-bg="red">HOME</a><div>home1<br>home2<br>home3</div></div></li>
+            <li><div><a href="#" data-bg="#b0c810">HTML</a><div><a href="#" data-bg="red">HOME</a><a href="#" data-bg="red">HOME</a></div></div></li>
+            <li><a href="#" data-bg="#c0c820">CSS</a></li>
+            <li><a href="#" data-bg="#a00830">Mobile</a></li>
+            <li><a href="#" data-bg="#a00840">jQuery</a></li>
+        </ul>
+    </div>
+    
+    <div  style="position:relative;z-index:1;">
+        <img src="img/1.jpg"/>
+    </div>
+    
+</body>
+</html>

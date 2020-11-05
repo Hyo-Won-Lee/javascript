@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    //이후 객체관련 내용들은 참조만하자.
+    //객체에 속성추가 하는 방법
+    //defineProperty 한개 추가
+    //definePropertys 여러개 추가
+	//다음과 같이 선언해서 객체에 name 속성을 추가할 수 있다.
+        var object = {};
+        Object.defineProperty(object, 'name', {
+        });
+		//////////////////////////////////////////////
+		// value,writeable,enumrable설명 속성값 설정 true로 해서 다시실행 해보자
+        var object = {};
+        Object.defineProperty(object, 'name', {
+            value: '윤인성',
+            writable: false,
+            enumerable: false
+        });
+
+        // 확인합니다.
+        object.name = 'OTHER';
+        for (var i in object) {
+            alert(i + ' : ' + object[i]);
+        }
+
+        // 출력합니다.
+        alert(object.name);
+		/////////////////////////////////////////////////////////
+		// set, get 함수를 설정하자.
+        var object = {};
+        var value = 'test';
+        //obuect.value='test'; 로 해서 처리해보자
+        Object.defineProperty(object, 'name', {
+            get: function () {
+                alert('GETTER');
+                return value;
+            },
+            set: function (newValue) {
+                alert('SETTER: ' + newValue);
+                value = newValue;
+            }
+        });
+
+        // 출력합니다.
+        object.name = 'ALPHA';
+        alert(object.name);
+		///set,get 함수 심화
+ //넓이를 입력받는 width 속성을 만드세요.(넓이는 양수여야만함)
+// 읽을때 width를 2배 증가해서 읽으세요.
+
+        var object = {};
+        // hidden 속성을 정의합니다.
+
+        Object.defineProperty(object, 'hidden', {
+            value: {//value:123 위에서 값  //여기서는 객체
+                width: null
+            }
+        });
+        // width 속성을 정의합니다.
+        Object.defineProperty(object, 'width', {
+            get: function () { return this.hidden.width; },
+            set: function (newValue) {
+                if (newValue < 0) {
+                    // 오류 발생: 프로그램 강제 종료
+                    alert('길이는 음수일 수 없습니다.');
+                } else {
+                    this.hidden.width = newValue;
+                }
+            }
+        });
+        // 출력합니다: 정상 사용
+        object.width = 10;
+        // 출력합니다: 오류 발생
+        object.width = -10;
+		//////////////////////////////////////////////////////////////////////////////////////////
+		  // configurable //설정 관련 속성
+		  //
+
+        var object = {};
+        var value = 'test';
+
+        Object.defineProperty(object, 'name', {
+            get: function () { return value; },
+            set: function (newValue) { value = newValue; },
+            configurable: true
+        });
+
+        Object.defineProperty(object, 'name', {
+            enumerable: true///configurable를 false로 설정하고 실행해보자 오류를 확인할 수 있다.
+        });
+		
+		///////////////////////////
+		        // defineProperties 사용법
+        var object = {};
+        Object.defineProperties(object, {
+            name: { value: '윤인성' },
+            region: { value: '서울특별시' }
+        });
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

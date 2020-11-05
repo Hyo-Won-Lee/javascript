@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>자바스크립트내에서의 foreach 구문</title>
+    <script type="text/javascript">
+        // 배열(컬렉션) 데이터
+        var arr = ["VisualAcademy", "DotNetKorea", "LicenseLand"];
+        // for문을 사용하여 반복
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br />");
+        }
+        // for~in 구문을 사용하여 반복
+        for (var i in arr) { // 요소값이 아닌 인덱스 값을 가져온다.
+            document.write(arr[i] + "<br />");
+        }
+
+        // 객체 데이터
+        var obj = { Name: '홍길동', Email: "redplus@live.com", Address: "인천" };
+        document.write(obj.Name + "<br /><hr />");
+        // 속성 리스트 출력
+        for (var o in obj) {
+            document.write(o + "<br />"); // Name, Email, Address
+        }
+        // 객체의 인덱서([])를 사용하여 속성값 출력
+        for (var o in obj) {
+            document.write(obj[o] + "<br />"); // "홍길동", ...
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

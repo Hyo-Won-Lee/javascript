@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //함수  실행단위 코드 블럭
+
+        // document.write("park");
+        // document.write("<hr>");
+
+        // document.write("park");
+        // document.write("<hr>");
+
+        // document.write("park");
+        // document.write("<hr>");
+
+        //function 예약어  printName함수이름(식별자)
+        // function printName(){
+        //     document.write("park");
+        //     document.write("<hr>");
+        // }
+
+        //함수
+        //함수 f(x)=x+10;
+        //x= 5이면 f(x)=15;
+        //f(5)
+        // function f(x){
+        //     return 4*x+5;
+        // }
+        // document.write(f(5));
+        //x*4+5 함수를 만들어서 x에 10을 넣어
+        //결과 값을 확인해보자.
+
+        //함수
+        //함수 선언부분
+        function printName(){
+            document.write("park");
+            document.write("<hr>");
+        }
+        //함수 실행부분
+        printName();
+        printName();
+
+        function calc(){
+            console.log("calc함수");
+            //x값과 x값을 가져와 더해서 sum에 넣어 준다.
+            //id를 찾는 방법
+            
+            //html태그 자체
+            //document.getElementById("x");
+            
+            var x=document.getElementById("x").value;
+            //document.getElementById("x").value;
+            //x라는 input태그에 사용자가 입력한 값
+            var y=document.getElementById("y").value;
+
+            var sum=parseInt(x)+parseInt(y);
+            document.getElementById("sum").value=sum;
+
+
+
+            //if(조건식){
+            if(true){
+                //true이면 실행되고 false이면
+                // 실행되지않음
+            }
+
+            if(조건){
+                //조건이 참이면 실행되는 블럭
+            }else{
+                //거짓이면 실행되는 블럭
+            }
+
+            if(조건){//1
+
+            }else if(조건){//2
+
+            }else if(조건){//3
+                
+            }else{//4번 중에 한개만 실행된다.
+
+            }
+            //4번 중에 한개만 실행된다.
+
+            switch(조건){
+                case 값1:
+                    //문장
+                    break;
+                case 값2:
+                    break;
+                case 값3:
+                    //문장
+                case 값4:
+                    //문장
+                    break;
+                default:
+                    break;
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <h3>덧셈 계산기</h3>
+    <form>
+        <input type="text" id="x"/><br>
+        <input id="y"/><br>
+        <input id="sum"/><br>
+        <input type="button" value="번튼" onclick="calc();"/><br>
+    </form>
+    
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

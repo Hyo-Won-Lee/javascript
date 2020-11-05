@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>폼 유효성 검사 : 아이디 및 암호 체크</title>
+    <style type="text/css">
+    div, td, input { color:Navy; font-size:9pt; font-family:"맑은 고딕" Verdana 굴림; }
+    </style>
+    <script language="javascript" type="text/javascript">
+    function CheckForm() 
+    {
+        //[1] 아이디 텍스트박스에 접근해서 txtUserID 변수로 객체 담기
+        var txtUserID = document.FrmLogin.txtUserID;
+        if (txtUserID.value == "" || 
+                !(txtUserID.value.length >= 3 && txtUserID.value.length <= 12)) 
+        { // 아이디가 입력되지 않았다면,
+            window.alert("아이디를 입력하시오.");
+            document.FrmLogin.txtUserID.focus(); // 해당 객체에 포커스
+            document.getElementById("txtUserID").select();//해당 객체의 텍스트 선택
+            return false; // 현재 submit 이벤트를 중지
+        }    
+        else
+        {
+            document.FrmLogin.action = "./asp/Default.aspx";
+            document.FrmLogin.submit(); // 폼의 내용을 action 속성의 URL로 전송                
+        }
+    }
+    </script>
+</head>
+<body>
+<form id="FrmLogin" name="FrmLogin" action="asp/Default.aspx" method="post">
+    <div align="center">
+    <table border="1" width="300">
+        <tr><td align="right">아이디:</td>
+            <td><input type="text" id="txtUserID" name="txtUserID" /></td>
+        </tr>
+        <tr><td align="right">암호:</td>
+            <td><input type="password" id="txtPassword" name="txtPassword" /></td>
+        </tr>
+        <tr><td colspan="2" align="center">
+            <input type="button" value="로그인" onclick="CheckForm();" />
+            <input type="reset" value="취소" />
+            </td>
+        </tr>
+    </table>
+    </div>
+</form>
+</body>
+</html>

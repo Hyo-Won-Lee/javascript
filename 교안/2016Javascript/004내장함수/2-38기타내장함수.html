@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // 인코딩할 URL을 만듭니다.
+        var URI = 'http://hanb.co.kr?test=한글입니다.';
+
+        // 출력할 문자열을 만듭니다.
+        var output = '';
+        output += 'escape()\n'
+        output += escape(URI) + '\n\n';
+        output += 'encodeURI()\n'
+        output += encodeURI(URI) + '\n\n';
+        output += 'encodeURIComponent()\n'
+        output += encodeURIComponent(URI) + '\n\n';
+
+        // 출력합니다.
+        alert(output);
+		////
+		var str = "3 + 5";
+document.write( str ); document.write("<br />");
+document.write( eval(str) ); // 연산식을 계산해준다.
+        ///////////////////////
+        // 문자열을 생성합니다.
+        var willEval = '';
+        willEval += 'var number = 10;';
+        willEval += 'alert(number);';
+
+        // eval() 함수를 호출합니다.
+        eval(willEval);
+
+        ////////////////////
+        // 문자열을 생성합니다.
+        var willEval = '';
+        willEval += 'var number = 10;';
+        willEval += 'alert(number);';
+
+        // eval() 함수를 호출합니다.
+        eval(willEval);
+
+        // eval() 함수로 호출한 코드의 변수를 사용합니다.
+        alert(number);
+
+        ////////////////////
+        var number = 1 / 0;
+        alert(number);
+        ////////////////////
+        var number = 1 / 0;
+        alert(number + ' : ' + isFinite(number));
+        //////////////////////////////
+        // 변수를 선언합니다.
+        var value = -10 / 0;
+        // 출력합니다.
+        if (value == Infinity) {
+            alert('Infinity입니다.');
+        } else {
+            alert('Infinity가 아닙니다.');
+        }
+        //////////////////////////////
+
+	if(NaN==NaN){
+		document.write('NaN==Nan');	
+	}else{
+		document.write('NaN!=Nan');
+	}
+	var st='aa';
+	var num=100;
+	if(isNaN(st)){
+		document.write('NaN==Nan');	
+	}else{
+		document.write('NaN!=Nan');
+	}
+	if(isNaN(num)){
+		document.write('NaN==Nan');	
+	}else{
+		document.write('NaN!=Nan');
+	}
+        ///////////////////////////////////
+
+        var won = '1000원';
+        var dollar = '1.5$';
+        alert(Number(won) + ' : ' + Number(dollar));
+        //////////////////////////////////////////////
+        var won = '1000원';
+        var dollar = '1.5$';
+        alert(parseInt(won) + ' : ' + parseInt(dollar));
+        alert(parseFloat(won) + ' : ' + parseFloat(dollar));
+
+		
+// parseInt() 함수
+var num = 12.34; // 실수형
+document.write( num, "<br />");
+document.write( parseInt(num), "<br />"); // 12
+
+// parseFloat() 함수 : 수(모양) -> 실수
+var su = "12.34";
+document.write( typeof(su), "<br />"); // string
+document.write( typeof(parseFloat(su)), "<br />"); // 무늬만 숫자값을 실제 숫자값으로 변경
+document.write( typeof(parseInt(su)), "<br />"); 
+//-> typeof() 연산자 : 현재값의 유형을 반환시켜주는 연산자
+
+var nan = "안녕";
+document.write( parseFloat(nan), "<br />"); // NaN(Not a Number) 메시지 출력
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    // var numbers=[1,2,3,4,5];
+    // numbers.push(6);
+    // document.write(numbers);//1,2,3,4,5,6
+    // var item=numbers.pop();//item 6
+    // document.write(numbers);//1,2,3,4,5
+    // document.write(item);
+    // numbers.sort(function(a,b){return b-a});
+    // document.write("<br>",numbers);
+
+    function MyStack(){
+        this.dataArray=new Array(100);
+        this.topCount=0;
+        this.push=function(inputData){
+            //데이터 입력
+            if(this.topCount<100){
+                this.dataArray[this.topCount++]=inputData;
+            }else{
+                alert("데이터가 isFull");
+            }
+        };
+        this.pop=function(){
+            //데이터 삭제후 리턴
+            if(this.topCount-1<0){
+                alert("데이터가 없습니다.");
+                return "없어요";
+            }
+            return this.dataArray[--this.topCount];
+        };
+        this.peak=function(){
+            if(this.topCount-1<0){
+                alert("데이터가 없습니다.");
+                return "없어요";
+            }
+            return this.dataArray[this.topCount];
+        };
+        this.toString=function(){
+            var returnValue="";
+            for(var i=0;i<this.topCount;i++){
+                returnValue+=this.dataArray[i];//+",";
+                if(i!=this.topCount-1){
+                    returnValue+=",";
+                }
+            }
+
+            return returnValue;
+        }
+
+    }
+
+    var stack1=new MyStack();
+    stack1.push(10);stack1.push(11);stack1.push(12);
+    document.write(stack1,"<br>");
+    var item =stack1.pop();
+    document.write(item,":",stack1);
+    var stack2=new MyStack();
+    stack2.push(105);stack2.push(511);stack2.push(412);
+    document.write("<br>",stack2,"<br>");
+    var item =stack2.pop();
+    document.write(item,":",stack2);
+
+
+    
+</script>
+</head>
+<body>
+</body>
+</html>

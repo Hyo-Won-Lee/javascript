@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    //객체 상수형태
+    var myCar={
+        model:"520d",
+        speed:60,
+        color:"red",
+        brake:function(){
+            this.speed=this.speed-10;
+        },
+        accel:function(){
+            speed=10;
+            this.speed=this.speed+10;
+        }
+    }
+    //생성자 함수를 사용하는 방법
+    function Car(model,speed,color){
+        this.model=model;
+        this.speed=speed;
+        this.color=color;
+        this.break=function(){
+            this.speed=this.speed-10;
+        };
+        this.accel=function(){
+            this.speed=this.speed+10;
+        };
+    }
+    //model:"520d",speed:60,color:"red",
+    //model:"510d",speed:45,color:"yellow"
+    //객체 상수 방식이랑 생성자 방식으로 객체 각각1개씩
+    //만들어보자.
+    var myCar1=new Car("520d",60,"red");
+    var myCar4=new Car("510d",45,"yellow");
+    myCar1.color="blue";
+    document.write(myCar1.color);
+
+    var myCar3={
+        model:"510d",
+        speed:45,
+        color:"yellow",
+        brake:function(){
+            this.speed=this.speed-10;
+        },
+        accel:function(){
+            speed=10;
+            this.speed=this.speed+10;
+        }
+    }
+    
+    //자동차 색상을 바꾸는 여러가지 방법을 
+    //구현하보자.
+    // myCar.color="blackPink";
+    // alert(myCar);
+    // myCar.changeColor("yellow");
+    // myCar.changeColor("green");
+    // alert(myCar);
+  
+
+
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

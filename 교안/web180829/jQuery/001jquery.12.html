@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	li{
+		list-style:none;
+	}
+	#box ul li{
+		position:relative;
+		left:100px;
+		top:100px;
+		padding:10px;
+		width:80px;
+		height:80px;
+		overflow:hidden;
+		background:yellowgreen;
+		color:#fff;
+		cursor:pointer;
+	}
+	.pagecurl{
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:1;
+		padding:10px;
+		width:80px;
+		height:80px;
+		background:red;
+		color:#000;
+	}
+
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.9.2.custom.js"></script>
+<script>
+
+	$(function(){
+		$("#box>ul>li").hover(
+			function(){
+				$(this).find(".pagecurl").stop().animate({left:"-100px",top:"100px"},400,"easeOutQuart");
+			},
+			function(){
+				$(this).find(".pagecurl").stop().animate({left:"0px",top:"0px"},400,"easeOutQuart");
+
+			}
+		)
+	
+	});
+
+</script>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>over
+				<div class="pagecurl">
+					previous over
+				</div>
+			</li>
+			<li>over
+					<div class="pagecurl">
+						previous over
+					</div>
+			</li>
+			<li>over
+					<div class="pagecurl">
+						previous over
+					</div>
+			</li>
+			<li>over
+					<div class="pagecurl">
+						previous over
+					</div>
+			</li>
+			<li>over
+					<div class="pagecurl">
+						previous over
+					</div>
+			</li>
+
+		</ul>
+	</div>
+
+</body>
+</html>

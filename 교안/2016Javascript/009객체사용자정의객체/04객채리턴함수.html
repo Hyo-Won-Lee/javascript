@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+ 
+function makeStudent(name,korean,math,english){
+	var willReturn={
+		이름:name,
+		국어:korean,
+		수학:math,
+		영어:english,
+
+                // 메서드
+                getSum: function () {
+                    return this.국어 + this.수학 + this.영어;
+                },
+                getAverage: function () {
+                    return this.getSum() / 3;
+                },
+                toString: function () {
+                    return this.이름 + '\t' + this.getSum() + '\t' + this.getAverage();
+                }
+	};
+	return willReturn;
+}
+
+
+var students=[];
+students.push(makeStudent('park1',53,35,54));
+students.push(makeStudent('park2',32,75,44));
+students.push(makeStudent('park3',63,35,94));
+
+
+var output='이름\t총점\t평균\n';
+for(var i in students){
+	output+=students[i].toString()+'\n';
+}
+alert(output);
+
+	</script>
+</head>
+<body>
+</body>
+</html>

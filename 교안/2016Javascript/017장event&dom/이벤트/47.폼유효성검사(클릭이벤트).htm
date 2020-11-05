@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>폼 유효성 검사</title>
+    <script language="javascript" type="text/javascript">
+    function CheckForm() {
+        var txt = document.getElementById("txt");
+        if (txt.value == "") {
+            alert("아이디를 입력하시오.");
+            txt.focus();
+        }    
+        else {
+            document.MyForm.action = "./asp/Default.aspx";
+            document.MyForm.submit();    
+        }
+    }
+    </script>
+</head>
+<body>
+<form name="MyForm">
+아이디 : <input type="text" id="txt" name="txt" />
+<input type="button" value="확인" onclick="CheckForm();" />
+</form>
+</body>
+</html>

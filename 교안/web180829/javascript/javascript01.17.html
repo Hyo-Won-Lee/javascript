@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    // var str='Like fasdf like son';
+    // result=str.match(/like/ig);
+    // document.writeln(result+'<br>');
+
+    // var str='foxman12@hanmail.net';
+    //  result=str.match(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i);
+    //  document.writeln(result+'<br>');
+    
+     var reg_email=/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+     //test 메소드 true false 값을 리턴
+     if(reg_email.test("foxman12@hanmail.net")){
+        alert("올바른 주소입니다.");
+
+     }else{
+        alert("올바른 이메일 주소가 아닙니다.");
+     }
+      
+    
+</script>
+</head>
+<body>
+</body>
+</html>

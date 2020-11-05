@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+
+       
+        ////////////변수를 리턴한 함수. 크로저 예
+        function test(name) {
+            var output = 'Hello ' + name + ' .. !';
+        }
+
+        // 출력합니다.
+        //alert(output);//외부에서 내부 변수를 사용할수 없으므로 에러가 발생한다.
+        ////////함수를 리턴한 함수 크로저
+        
+        // 함수를 선언합니다.
+        function test(name) {
+            var output = 'Hello ' + name + ' .. !';
+            return function () {
+                alert(output);
+            };
+        }
+        // 출력합니다.
+        test('JavaScript')();
+
+        ////////////////// 함수를 리턴해서 변수에 저장하기
+        function test(name) {
+            var output = 'Hello ' + name + ' .. !';
+            return function () {
+                alert(output);
+            };
+        }
+
+        // 변수를 선언합니다.
+        var test_1 = test('Web');
+        var test_2 = test('JavaScript');
+
+        // 함수를 호출합니다.
+        test_1();
+        test_2();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

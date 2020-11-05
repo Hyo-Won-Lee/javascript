@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    //객체 관련 있는 프로그램의 집합
+        //배열은 객체다
+        document.write(typeof ([]));
+
+        //배열선언
+        var array = ['사과', '바나나', '망고', '딸기'];
+
+        //인덱스와 요소  배열은 요소에 인덱스로 접근
+        arry[0] = '과자';
+        array[1] = '과자2';
+
+        // 변수를 선언합니다.
+        //객체는 요소에 키로 접근
+        var product = {
+            제품명: '7D 건조 망고',
+            유형: '당절임',
+            성분: '망고, 설탕, 메타중아황산나트륨, 치자황색소',
+            원산지: '필리핀'
+        };
+
+        product["제품명"] = '6d';
+        product.제품명 = '5d';
+        //////////////////////////////////////
+        // 변수를 선언합니다.
+        var object = {
+            'with space': 273,
+            'with ~!@#$%^&*()_+': 52
+        };
+        object['with space'] = 22;
+        alert(object['with ~!@#$%^&*()_+']);
+
+
+        ////////////////////////
+        // 배열내부에 있는값 요소 : 객체 내부에 있는 값 속성
+        var object = {
+            number: 273,
+            string: 'RintIanTta',
+            boolean: true,
+            array: [52, 273, 103, 32],
+            method: function () {
+            }
+        };
+        //////////////////////////////////////
+        // 변수를 선언합니다.
+        var person = {
+            name: '윤인성',
+            eat: function (food) { }
+        };
+
+
+        //eat은 함수이므로  메서드 호출합니다.
+        person.eat();
+        //////////////////////////////////////////
+        // 자기 자신을 호출하는 this연산자.
+        var person = {
+            name: '윤인성',
+            eat: function (food) {
+                alert(this.name + '이 ' + food + '을/를 먹습니다.');
+            }
+        };
+
+        // 메서드를 호출합니다.
+        person.eat('밥');
+
+        ////////////in 사용법
+        var product = {
+            name: 'Microsoft Visual Studio 2012 Ultimate',
+            price: '15,000,000원',
+            language: '한국어',
+            supportOS: 'Win 32/64',
+            subscription: true
+        };
+
+        // 출력합니다.
+        var output = '';
+        for (var key in product) {
+            output += '-' + key + ': ' + product[key] + '\n';
+        }
+        alert(output);
+        /////////////////////////  in 외부변수를 선언합니다.
+        var output = '';
+        var student = {
+            이름: '연하진',
+            국어: 92, 수학: 98,
+            영어: 96, 과학: 98
+        };
+
+        // in 키워드를 사용합니다.
+        output += "'이름' in student: " + ('이름' in student) + '\n';
+        output += "'성별' in student: " + ('성별' in student);
+
+        // 출력합니다.
+        alert(output);
+        ////////////////////////////////////////
+        //with
+        // 변수를 선언합니다.
+        var student = {
+            이름: '연하진',
+            국어: 92, 수학: 98,
+            영어: 96, 과학: 98
+        };
+
+        // 출력합니다.
+        var output = '';
+        output += '이름: ' + student.이름 + '\n';
+        output += '국어: ' + student.국어 + '\n';
+        output += '수학: ' + student.수학 + '\n';
+        output += '영어: ' + student.영어 + '\n';
+        output += '과학: ' + student.과학 + '\n';
+        output += '총점: ' + (student.국어 + student.수학 + student.영어 + student.과학);
+        alert(output);
+
+        ///////////////////with
+        // 변수를 선언합니다.
+        var student = {
+            이름: '연하진',
+            국어: 92, 수학: 98,
+            영어: 96, 과학: 98
+        };
+
+        // 출력합니다.
+        var output = '';
+        with (student) {
+            output += '이름: ' + 이름 + '\n';
+            output += '국어: ' + 국어 + '\n';
+            output += '수학: ' + 수학 + '\n';
+            output += '영어: ' + 영어 + '\n';
+            output += '과학: ' + 과학 + '\n';
+            output += '총점: ' + (국어 + 수학 + 영어 + 과학);
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    window.onload=function(){
+        var node=document.createTextNode("새로 추가한노드1");
+        document.getElementById("target").appendChild(node);
+        node=document.createTextNode("새로 추가한노드2");
+        document.getElementById("target").insertBefore(node,document.getElementById("target").firstChild);
+
+        //node=document.createTextNode("새로 추가한노드3");
+        //document.getElementById("target").innerHTML=node.data;
+        //document.getElementById("target").innerHTML="새로추가한노드3";
+        var parend =document.getElementById("target");
+        parend.removeChild(parend.firstChild);
+        parend.removeChild(parend.lastChild);
+
+
+    }
+    
+</script>
+</head>
+<body>
+    <div id='target'>
+        div Target
+    </div>
+</body>
+</html>

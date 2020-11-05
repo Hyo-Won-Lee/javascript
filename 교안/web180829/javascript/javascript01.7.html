@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // document.getElementById("console").innerHTML="안녕1";
+        //alert("안녕");
+        function myDbClick(){
+            alert("두번 클릭됨");
+        }
+        
+    </script>
+</head>
+<body onload="document.getElementById('console').innerHTML='안녕2';" onresize="alert('크기변경')">
+  
+    이벤트
+    <p id="console" ondblclick="myDbClick();"> 클릭</p>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

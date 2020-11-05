@@ -1,0 +1,1 @@
+//alert("myscript 파일");

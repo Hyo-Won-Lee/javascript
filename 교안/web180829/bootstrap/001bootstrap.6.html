@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<style>
+    .navbar{
+        background-color:#40ff;
+        /*navbar-light bg-light 이부분 색제하면 적용*/
+    }
+    .navbar-nav li{
+        background-color:#ff0;
+    }
+</style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+<nav class="navbar navbar-expand-xl">
+    <!--navbar-brand 외쪽상단에 이미지추가해서 사이트 메인이동이나 브랜드 표시 용도로 사용
+    data-toggle="collapse" 
+    버튼을 클래스 형태로 사용
+
+    class="navbar-toggler"
+    
+    -->
+    <a class="navbar-brand" href="#"><img src="./imgs/logo.png" alt="9PixelStudio"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    
+    data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon">sdf</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">home</a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="#">about</a>
+            </li><li class="nav-item">
+                    <a class="nav-link" href="#">protfolio</a>
+            </li>
+           
+            <li class="nav-item">
+                        <a class="nav-link disabled" href="#">contact</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  aria-haspopup="true" aria-expanded="true" data-toggle="dropdown">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action1</a>
+                    <a class="dropdown-item" href="#">Action2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Action3</a>
+                </div>
+            </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" 
+
+type="submit">Search</button>
+          </form>
+    </div>
+
+
+
+</nav>
+        </div>
+
+   
+    </div>
+  
+</body>
+</html>
+
+
+
+
+
+
+

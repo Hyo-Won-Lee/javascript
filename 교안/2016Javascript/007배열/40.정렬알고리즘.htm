@@ -1,0 +1,28 @@
+<script language="javascript" type="text/javascript">
+// 정렬 : 데이터를 작은것에서 큰것순으로 정렬(오름차순) 또는 그반대(내림차순)
+// 오름차순 : 1, 2, 3 순으로 출력
+// 내림차순 : C, B, A 순으로 출력
+
+// Input
+var sort = [33, 22, 11, 55, 44];
+var temp = 0;
+// Process : Selection Sort(선택정렬) 알고리즘
+for (var i = 0; i < sort.length - 1; i++)
+{
+    for (var j = i + 1; j < sort.length; j++)
+    {
+        if (sort[i] > sort[j])
+        {
+            temp = sort[i];
+            sort[i] = sort[j];
+            sort[j] = temp;    
+         }
+    }
+}
+// Output
+for (var i = 0; i < sort.length; i++)
+{
+    document.write(sort[i] + " ");
+}
+document.write("<br />");
+</script>

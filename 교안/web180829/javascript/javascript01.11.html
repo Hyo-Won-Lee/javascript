@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<script>
+    //Student 객체를 만들어
+    //학생이름,학번,국,영,수 성적을 저장하고(속성 5개)
+    //성적의 평균,총점(필드 2개)을 구하는 프로그램을 완성하시오.
+    //1. 함수로 만들어 실행해보자
+    //2. 객체로 업그래이드 해보자.
+
+    var student1={
+        name:"park",        id:"20001205",
+        kor:90,        eng:90,        math:90,
+        avg:function(){
+            return this.sum()/3;
+        },
+        sum:function(){
+            return this.kor+this.eng+this.math;
+        },
+        toString:function(){
+            return "[name:"+this.name+",avg:"+this.avg()+"]";
+        }
+    }
+    var student2={
+        name:"park1",        id:"20001205",
+        kor:30,        eng:30,        math:30,
+        avg:function(){
+            return this.sum()/3;
+        },
+        sum:function(){
+            return this.kor+this.eng+this.math;
+        },
+        toString:function(){
+            return "[name:"+this.name+",avg:"+this.avg()+"]";
+        }
+    }
+    student1.kor=50;
+    document.write(student1,"<br>");
+    student2.kor=80;
+    document.write(student2,"<br>");
+
+
+    
+
+
+
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

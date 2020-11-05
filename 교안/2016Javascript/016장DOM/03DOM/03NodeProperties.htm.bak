@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>노드 관련된 주요 속성 정리</title>
+    <script type="text/javascript">
+        // 페이지 로드 이벤드 잡기
+        window.onload = function () {
+            var myFavorites = document.getElementById("myFavorites");
+
+            var msg = "";
+            msg += "노드명 : " + myFavorites.nodeName; // 요소 노드의 태그명 대문자
+            msg += "\n노드타입 : " + myFavorites.nodeType; // 요소:1, 속성:2, 텍스트:3, ...
+            msg += "\n노드값 : " + myFavorites.nodeValue; //요소:null,속성:값,텍스트:텍스트
+            msg += "\n자식노드수 : " + myFavorites.childNodes.length;
+
+            var childs = myFavorites.childNodes; // 자식 노드들을 배열로 반환
+            for (var i = 0; i < childs.length; i++) {
+                if (childs[i].nodeType == 1) { // 요소 노드만 필터링 //중간에 다른 문자들이 들어가 있다.
+                   // alert(childs[i].nodeName);
+                }
+				alert(childs[i].nodeName);
+            }
+
+            alert(msg);
+        };
+    </script>
+</head>
+<body>
+    <ul id="myFavorites">
+        <li>JavaScript</li>
+        <li>DOM</li>
+        <li>jQuery</li>
+    </ul>
+</body>
+</html>
+<!--
+노드 타입 반환값 종류
+
+1. ELEMENT_NODE
+
+2. ATTRIBUTE_NODE
+
+3. TEXT_NODE
+
+4. CDATA_SECTION_NODE
+
+5. ENTITY_REFERENCE_NODE
+
+6. ENTITY_NODE
+
+7. PROCESSING_INSTRUCTION_NODE
+
+8. COMMENT_NODE
+
+9. DOCUMENT_NODE
+
+10. DOCUMENT_TYPE_NODE
+
+11. DOCUMENT_FRAGEMENT_NODE
+
+12. NOTATION_NODE
+-->
+

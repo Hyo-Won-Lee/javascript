@@ -1,0 +1,27 @@
+function makeIncrementer()
+{
+return function(x){return x+1;};
+}
+var inc=makeIncrementer();
+prn(inc(7));//7=>8
+
+//반환값 자체를 함수로 ....
+
+함수 자체가 하나의 개체이다
+function sayHi(x){
+prn("안녕"+x);
+}
+sayHi.aaa="aaa";
+sayHi["bbb"]="bbb";
+prn(sayHi.aaa+sayHi.bbb);
+
+var arr=[];
+arr[0]=function(x){return x*x;};
+arr[1]=arr[0](2);//2*2=4
+arr[2]=arr[0](arr[1]);//4*4=16;
+arr[3]=arr[0](arr[2]);//16*16=256;
+prn(arr[3]);
+
+//함수는 개체의 속성으로도 사용 가능
+var obj={"aaa":function(){return"AAA";}};
+prn{obj.aaa());

@@ -1,0 +1,56 @@
+<!Doctype html>
+<html>
+<head>
+	<script>
+/*function Square(length){//정사각형
+	this.width=length;
+	this.height=length;
+}
+*/
+function Rectangle(w,h){
+		var width=w;
+		var height=h;
+		this.getWidth=function(){return width;};
+		this.getHeight=function(){return height;};
+		this.setWidth=function(w){
+			if(w<0){
+				alert('음수는 입력할수 없습니다.');
+			}else{
+				width=w;
+			}
+		}
+		this.setHeight=function(h){
+			if(h<0){
+				alert('음수는 입력할수 없습니다.');
+			}else{
+				height=h;
+			}
+		}
+	}
+	
+        Rectangle.prototype.getArea=function(){
+		return this.getWidth()*this.getHeight();
+	}
+var rectangle =new Rectangle(10,30);
+alert(rectangle.getArea());
+
+function Square(length){
+	this.base=Rectangle;
+	this.base(length,length);
+}
+Square.prototype=Rectangle.prototype;
+Square.prototype.constructor=Square;
+
+var rectangle=new Rectangle(5,8);
+var square=new Square(5);
+alert(rectangle.getArea()+":"+ square.getArea());
+
+alert(square instanceof Rectangle);
+
+
+
+	</script>
+</head>
+<body>
+</body>
+</html>

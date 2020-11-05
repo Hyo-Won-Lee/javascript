@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+               //p태그 숨기기
+               // $("p").hide();    
+               //id가 test인 태그 숨기기
+               //$("#test").hide();
+               //class가 test2인 태그 숨기기
+               //$(".test2").hide();
+                //모두 선택
+               $("*").hide();
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2 class="test2">hi~~~</h2>
+    <p>안녕하세요</p>
+    <p id="test">id Test</p>
+    <p class="test2">안녕하세요</p>
+    <button>click me</button>
+    
+</body>
+</html>

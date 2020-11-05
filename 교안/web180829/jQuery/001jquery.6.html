@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.9.2.custom.js"></script>
+   
+    <script>
+        $(document).ready(function(){
+            $('button').eq(0).click(
+                function(){
+                    $('img').show('fold',1000);
+                }
+            )
+            $('button').eq(1).click(
+                function(){
+                    $('img').hide('drop',{direction:'up'},'slow');
+                }
+            )
+            $('button').eq(2).click(function(){
+                $('img').toggle('explode');
+            })
+   
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button>show</button><button>hide</button><button>toggle</button>
+    </div>
+    <div><img src="img/1.jpg" width=150 height=150 style="display:none"/></div>
+</body>
+</html>

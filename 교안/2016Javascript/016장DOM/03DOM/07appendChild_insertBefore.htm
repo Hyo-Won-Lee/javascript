@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>노드 추가 및 이동 : appendChild(), insertBefore()</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div { border:1px solid red; }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            // 추가 : 요소 뒤에 추가
+            var hrTag = document.createElement("hr");
+            document.body.appendChild(hrTag); // 특정 요소 뒤에 노드 추가
+            // 이동
+            var myDiv = document.getElementById("myDiv");
+            myDiv.appendChild(hrTag); // 이동
+            // 추가 : 요소 앞에 추가
+            var pTag = document.createElement('p');
+            var pText = document.createTextNode('안녕');
+            pTag.appendChild(pText); // <p>안녕</p>
+            myDiv.insertBefore(pTag, hrTag); // hr 태그 앞에 p 태그 위치
+            //myDiv.appendChild(pTag); // hr 태그 뒤에
+        };
+    </script>
+</head>
+<body>
+    <div id="myDiv">
+    </div>
+<!--    
+    <div id="myDiv">
+        <p>안녕</p>
+        <hr />
+    </div>
+-->
+</body>
+</html>

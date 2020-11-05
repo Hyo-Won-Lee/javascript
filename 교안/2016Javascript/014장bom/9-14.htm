@@ -1,0 +1,21 @@
+<script language="javascript" type="text/javascript">
+//[1] write() 메서드 : 문서 영역에 문자열/데이터 출력
+document.write("<hr />");
+//[2] title 속성 : 현재 문서의 <title> 태그의 내용을 출력 또는 설정
+document.title = "현재 예제는 document 객체 학습중...";
+document.write( "현재 문서의 제목 : " + document.title + "<br />" );
+//[3] lastModified 속성 : 현재 HTML문서가 마지막에 저장된 시간
+document.write( "현재 문서의 마지막 저장 시간 : " + document.lastModified + "<br />" );
+//[4] 글꼴 색상 변경 관련 간단한 속성
+ChangeColor = function()
+{
+    document.bgColor = "silver";
+    document.fgColor = "red";
+}
+</script>
+
+안녕하세요.<br />
+
+<input type="button" value="색상 변경" onclick="ChangeColor();" />
+
+

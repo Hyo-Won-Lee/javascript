@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>노드 삭제 : removeChild()</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        window.onload = function () {
+            // 특정 요소 선택
+            var theDiv = document.getElementById("theDiv");
+            var thePara = document.getElementById("thePara");
+            theDiv.removeChild(thePara); // 특정 요소의 자식 노드를 삭제
+
+            // 특정 자식 요소의 부모 요소를 통해서 자식 요소 삭제
+            var strHi2 = document.getElementById("strHi2");
+            var thePara2 = strHi2.parentNode; // 부모 요소를 참조
+            var deleteHi2 = thePara2.removeChild(strHi2); // 삭제된 요소를 참조
+
+            // 삭제된 요소를 새로운 곳에 추가
+            document.getElementById("msg").appendChild(deleteHi2); // 추가
+        };
+    </script>
+</head>
+<body>
+    <div id="theDiv">
+        <p id="thePara">
+            <span id="strHi">안녕</span>하세요
+        </p>
+        <p id="thePara2">
+            <span id="strHi2">반갑</span>습니다
+        </p>
+        <p id="msg">        
+        </p>
+    </div>
+</body>
+</html>

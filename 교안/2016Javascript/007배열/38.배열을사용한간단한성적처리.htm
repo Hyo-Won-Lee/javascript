@@ -1,0 +1,22 @@
+<script language="javascript" type="text/javascript">
+// 3명의 국어점수를 입력받아서 총점과 평균을 구하는 프로그램
+
+    //Input
+//var arr = new Array();
+//var kor = new Array(3); kor[0] = 100; kor[1] = 90; kor[2] = 80;//첫번째 모양
+//var kor = new Array(100, 90, 80);//두번째 모양
+var kor = [100, 90, 85, 100, 90]; // 세번째 모양 : 제일 간결하다.
+var total = 0; // 총점
+var avg = 0.0; // 평균
+//Process
+//total = kor[0] + kor[1] + kor[2]; // 첫번째 모양
+for (var i = 0; i < kor.length; i++)
+{
+    total += kor[i]; // 누적 : 두번째 모양
+}
+avg = total / parseFloat(kor.length); // 배열.length : 배열의 크기(size) 
+//Output
+document.write("총점 : " + total + "<br />");
+document.write("평균 : " + avg + "<br />");
+</script>
+

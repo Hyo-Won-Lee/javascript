@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--자바스크립트 사용방법
+    1. 행내장형(inline)
+        html코드안에서 자바코드 실행
+        대표적으로 이벤트에서 많이사용
+    2. 내장형
+        script 태그를 사용하는 방법
+    3. 외장형
+        자바스크립트 파일을 따로 생성해서 사용
+    -->
+    <title>3.css 변경</title>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("demo");
+            x.style.fontSize="25px";
+            //자바스크립트에서는 '' 와 ""가 동일함.
+            //자바에서는 '' 와 ""가 다름
+            //'a' "a" "ab" 
+            //font-size,font-size
+            //subStr  substr
+            x.style.color="red";
+        }
+       
+    </script>
+    
+</head>
+<body>
+    <p id="demo">javascript can change the style of an HTML</p>
+    <button type="button" onclick="myFunction()">click me!</button>
+    
+</body>
+</html>

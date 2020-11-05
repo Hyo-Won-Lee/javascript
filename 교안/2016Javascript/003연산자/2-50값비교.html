@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        alert('' == false);
+        alert('' == 0);
+        alert(0 == false);
+        alert('273' == 273);
+
+//타입비교
+        alert('' === false);
+        alert('' === 0);
+        alert(0 === false);
+        alert('273' === 273);
+
+		  var str = "";
+        
+        document.write(str == 0); // true => 관대하게 비교
+        document.write(str === 0); // false => 정확한 타입 비교
+   
+        document.write("<hr />");
+   
+        document.write(str != 0); // false
+        document.write(str !== 0); // true
+
+        document.write("<hr />");
+
+        document.write(null == undefined); // true
+        document.write(null === undefined); // false
+    </script>
+</head>
+<body>
+
+</body>
+</html>

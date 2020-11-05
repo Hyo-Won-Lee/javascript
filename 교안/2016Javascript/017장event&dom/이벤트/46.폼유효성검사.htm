@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>제목 없음</title>
+    <script language="javascript" type="text/javascript">
+    function CheckForm() {
+        var uid = document.getElementById("txtUserID");
+        if (uid.value.length < 3 || uid.value.length > 12) {
+            window.alert("아이디를 3자 이상 12자 이하로 입력하시오.");
+            uid.focus();
+            uid.select();
+            return false; // 멈춤
+        }
+        else {
+            return true; // submit 이벤트 실행
+        }
+    }
+    </script>
+</head>
+<body>
+<form id="MyForm" action="./asp/Default.aspx" method="post" 
+    onsubmit="return CheckForm();">
+아이디 : <input type="text" id="txtUserID" name="txtUserID" />
+<input type="submit" value="확인" />
+</form>
+</body>
+</html>

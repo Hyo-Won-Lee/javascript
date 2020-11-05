@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+	////1.평상시처럼 선언한 사각형 넓이 구하는 객체
+	////2.사용자의 잘못된 입력이 발생할때 새로운 처리가 필요하게됨
+	  
+        // 생성자 함수를 선언합니다.
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        };
+
+        // 변수를 선언합니다.
+        var rectangle = new Rectangle(5, 7);
+        rectangle.width = -2;//사용자의 잘못된 입력
+
+        // 출력합니다.
+        alert('AREA: ' + rectangle.getArea());
+
+		///////3.일단 변수입력 함수를 set,get를 사용하여 선언한다.
+        function Rectangle(w, h) {
+            // 변수를 선언합니다.
+            var width = w;
+            var height = h;
+
+            // 메서드를 선언합니다.
+            this.getWidth = function () { return width; };
+            this.getHeight = function () { return height; };
+            this.setWidth = function (w) {
+                width = w;
+            };
+            this.setHeight = function (h) {
+                height = h;
+            };
+        }
+		
+		///////4. set 함수에서 음수 입력시 처리를 한다.
+		 // 생성자 함수를 선언합니다.
+        function Rectangle(w, h) {
+            // 변수를 선언합니다.
+            var width = w;
+            var height = h;
+
+            // 메서드를 선언합니다.
+            this.getWidth = function () { return width; };
+            this.getHeight = function () { return height; };
+            this.setWidth = function (w) {
+                if (w < 0) {
+                    throw '길이는 음수일 수 없습니다.';
+                } else {
+                    width = w;
+                }
+            };
+            this.setHeight = function (h) {
+                if (h < 0) {
+                    throw '길이는 음수일 수 없습니다.';
+                } else {
+                    height = h;
+                }
+            };
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.getWidth() * this.getHeight();
+        };
+
+        // 변수를 선언합니다.
+        var rectangle = new Rectangle(5, 7);
+
+        rectangle.setWidth(-2);
+
+        // 출력합니다.
+        alert('AREA: ' + rectangle.getArea());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

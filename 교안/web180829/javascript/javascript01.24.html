@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<style>#myDiv{border:1px solid blue;}</style>
+<script>
+   function getElements(){
+       var liTags=document.getElementByTagName('li');
+       //alert(liTags.length);
+       for(var i=0;i<liTags.length;i++){
+           //setAttribute("value","v1");
+           alert(liTags[i].getAttribute("value"));
+       }
+       //img태그 src속성을 변경해서 클릭하면 이미지를 변경하고 현재 이미지 경로를 보여주는 프로그램을 만들어 보자.
+
+
+   }
+    
+</script>
+</head>
+<body>
+
+    <ul>
+        <li value="0">JavaScript</li>
+        <li value="1">DOM</li>
+        <li value="2">jQuery</li>
+    </ul>
+
+    <ul>
+        <li value="JavaScript">JavaScript</li>
+        <li value="DOM">DOM</li>
+    </ul>
+
+    <input type="button" name="btnGetLength" value="li 태그의 개수" onclick="getElements()" />
+
+</body>
+</html>

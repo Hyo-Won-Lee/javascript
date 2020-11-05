@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        ////ECMAScript
+		//isArray 배열인지 아닌지 확인하는 함수
+        alert(Array.isArray([1, 2, 3]));
+        alert(Array.isArray({}));
+        alert(Array.isArray(1));
+		/////indexof lastindexof 변수를 선언합니다.
+        var array = [1, 2, 3, 4, 5, 5, 4, 3, 2, 1];
+
+		//indesOf를 이용해서 처리하기
+	//데이터 4가 있는 위치 없으면 -1
+        // 메서드를 사용합니다.
+        var output1 = array.indexOf(4);
+        var output2 = array.indexOf(8);
+        var output3 = array.lastIndexOf(4);
+        var output4 = array.lastIndexOf(8);
+        // 출력합니다.
+        var output = '';
+        output += output1 + ' : ' + output2 + '\n';
+        output += output3 + ' : ' + output4;
+        alert(output);
+		/////////
+		 // forEach. 각각의 배열요소를  for in 처럼 반복함
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // 메서드를 사용합니다.
+        var sum = 0;
+        var output = '';
+        array.forEach(function (element, index, array) {
+            sum += element;
+            output += index + ': ' + element + ' → ' + sum + '\n';
+			//alert(array);
+        });
+        // 출력합니다.
+        alert(output);
+		/////////////////////////////////////////////
+		//// map 기존의 배열에 특정 규칙을 적용해 새로운 배열을 만들때 사용 
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // 메서드를 사용합니다.
+        var output = array.map(function (element) {
+            return element * element;
+        });
+        /*
+        // 출력합니다.
+        alert(output);		
+		//////////////////////////////
+		        // FILTTER사용방법  //조건에 맞는것만 남김
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,1];
+        // 메서드를 사용합니다.
+        array = array.filter(function (element, index, array) {
+            return element <= 5;
+        });
+        // 출력합니다.
+        alert(array);
+		/////////////////////
+		 // EVERY,  모두 만족
+         //SOME     적어도 하나 만족
+         
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // 함수를 선언합니다.
+        function lessThanFive(element, index, array) {
+            return element < 5;
+        }
+        function lessThanTwenty(element, index, array) {
+            return element < 20;
+        }
+        // 메서드를 사용합니다.
+        var output1 = array.every(lessThanFive);
+        var output2 = array.every(lessThanTwenty);
+        var output3 = array.some(lessThanFive);
+        var output4 = array.some(lessThanTwenty);
+        // 출력합니다.
+        var output = ''
+        output += output1 + ' : ' + output2 + '\n';
+        output += output3 + ' : ' + output4 + '\n';
+        alert(output);*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

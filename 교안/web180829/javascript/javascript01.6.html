@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    var unitX=0;
+    var unitY=0;
+    var map=[
+        [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+        [1,0,0,0,0,0,0,0,0,0,0,1,1,0,2],
+        [1,0,1,1,1,1,1,1,1,1,0,0,1,0,1],
+        [1,0,1,0,0,0,0,0,0,1,1,0,1,0,1],
+        [1,0,1,0,1,1,1,1,0,1,0,0,1,0,1],
+        [1,0,1,0,1,1,0,0,0,1,0,1,1,0,1],
+        [1,0,1,0,1,0,0,1,0,1,0,0,1,0,1],
+        [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1],
+        [1,0,0,0,1,0,0,0,1,0,0,0,1,0,1],
+        [1,1,1,1,1,0,1,0,1,1,0,1,1,0,1],
+        [1,0,0,0,1,0,1,0,1,1,0,0,1,0,1],
+        [1,0,1,0,1,0,1,0,0,1,1,0,1,0,1],
+        [1,0,1,0,1,1,1,1,0,1,1,0,1,0,1],
+        [1,3,1,0,0,0,0,0,0,1,0,0,0,0,1],
+        [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    ];
+    //맵으로 만드는 테이블을 문자열로 리턴하는 함수
+    //1. x,y 값을 받아서 xy크기만큼 table를 만든다.
+    //2. 가로가 x  세로가 y
+    //3. 안쪽의 for문이 x이다.
+    function mapTableHtml(x,y,width){
+        var returnValue="<table bgcolor='white' border='1'>";
+
+        for(var i=0;i<y;i++){
+            returnValue+="<tr>";
+            for(var j=0;j<x;j++){
+                returnValue+="<td id=x"+j+"y"+i
+            +" width="+width+" height="+width+">"
+            +" </td>";
+            // "<td id=x0y0 width=50 height=50>"
+                
+            }
+            returnValue+="</tr>";
+            //returnValue=returnValue+"</tr>";
+        }
+        returnValue+="</table>";
+
+        return returnValue;
+    }
+
+    alert(mapTableHtml(10,10,50));
+    //document.write(mapTableHtml(10,10,50));
+    
+   
+    
+    //changeColor(3,3,red);
+    //다음과 같은 함수를 실행시키면 id가 x3y3인 td에 
+    //색을 red로 변경하는 함수를 만들어라.
+    //화면이 다 불려지고 나서 실행되는 함수
+    function changeColor(x,y,changeColor){
+        var g=document.getElementById("x"+x+"y"+y);
+        //g.style.backgroundColor=changeColor;
+        g.bgColor=changeColor;
+    }
+    //배열를 지도에 그리는 작업을 해보자.
+    //drowMap(map);
+    function drowMap(gMap){
+        document.getElementById("drowMap").innerHTML =mapTableHtml(gMap[0].length,gMap.length,20);
+        //drowMap(map);
+        for(var i=0;i<gMap.length;i++){
+            for(var j=0;j<gMap[0].length;j++){
+                if(gMap[i][j]==1){//1인경우
+                    changeColor(j,i,"brown");
+                }else if(gMap[i][j]==0){//0인경우
+                    changeColor(j,i,"white");
+                }else if(gMap[i][j]==3){
+                    unitX=j;
+                    unitY=i;
+                    //changeColor(j,i,"yellow");
+                    //꼬부기 위치 td
+                    document.getElementById("x"+unitX+"y"+unitY).innerHTML="<img src='Kkobuk.jpg' width='17' height='17'>";
+
+
+                }
+                
+            }
+        }
+
+
+
+    }
+
+    function isMove(x,y){
+        var returnValue=false;
+        if(map[y][x]!=0){
+
+        }else{
+            returnValue=true;
+        }
+        return returnValue;
+    }
+
+
+    function inputFunction(value){
+        //alert(value);
+        //alert(String.fromCharCode(value));
+
+        //사용자가 '8'를 입력하면 
+        //unitX=1; unitY=13;
+        //현재 위치에 .innerHTML="";
+
+        //unitY=unitY-1
+
+        //변경된 위치에 꼬부기 넣기
+
+        switch(String.fromCharCode(value)){
+            case '8':
+                if(isMove(unitX,unitY-1)){
+                    //alert('8');
+                    //이동전 꼬부기 위치에 꼬부기 삭제
+                    document.getElementById("x"+unitX+"y"+unitY).innerHTML="";
+                    unitY=unitY-1;
+                    document.getElementById("x"+unitX+"y"+unitY).innerHTML="<img src='Kkobuk.jpg' width='17' height='17'>"
+                }
+
+            break;
+            //다른 방향도 case문을 이용해서 처리해보자.
+            
+        }
+
+        
+
+
+    }
+
+    window.onload=function(){
+        drowMap(map);
+            //changeColor(3,3,"red");
+    }
+    </script>
+</head>
+<body onkeypress="inputFunction(event.keyCode);">
+    <p id="drowMap">
+        <!-- 문자열로된 html table생성 위치 -->
+    </p>
+    
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
