@@ -4,74 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-
-        div{
-            margin-left:50px;
-            margin-top:-70px;
-        }
-
-        p{
-            margin-top:50px;
-        }
-
+      table{
+          border-collapse:collapse;
+      }
     </style>
+
     <script>
-    //3번 경마 게임
-        var random=function(){
-            var num1=parseInt(Math.random()*500)+1;
-            var num2=parseInt(Math.random()*500)+1;
-            var num3=parseInt(Math.random()*500)+1;
-            var num4=parseInt(Math.random()*500)+1;
-            
-            document.getElementById('horse1').style.marginLeft=num1+'px';
-            document.getElementById('horse2').style.marginLeft=num2+'px';
-            document.getElementById('horse3').style.marginLeft=num3+'px';
-            document.getElementById('horse4').style.marginLeft=num4+'px';
+    
 
-            if(num1 == 500){
-                document.getElementById('result').innerHTML="<b>1번 말이 승리했습니다!</b>";
-                clearInterval(start);
-            }else if(num2 == 500){
-                document.getElementById('result').innerHTML="<b>2번 말이 승리했습니다!</b>";
-                clearInterval(start);
-            }else if(num3 == 500){
-                document.getElementById('result').innerHTML="<b>3번 말이 승리했습니다!</b>";
-                clearInterval(start);
-            }else if(num4 == 500){
-                document.getElementById('result').innerHTML="<b>4번 말이 승리했습니다!</b>";
-                clearInterval(start);
-            }
-        }
-
-        var start=setInterval(random,100);
 
     </script>
 
 </head>
 <body>
-    <h1>경주마 게임</h1><br>
-    <p><b>1번</b></p>
-    <div>
-        <img id="horse1" width=100 height=100 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140101_166%2Fnitro1_1388563770319moiLt_GIF%2Fhorse1.gif&type=sc960_832_gif">
-    </div>
-
-    <p><b>2번</b></p>
-    <div>
-        <img id="horse2" width=100 height=100 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140101_166%2Fnitro1_1388563770319moiLt_GIF%2Fhorse1.gif&type=sc960_832_gif">
-    </div>
-
-    <p><b>3번</b></p>
-    <div>
-        <img id="horse3" width=100 height=100 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140101_166%2Fnitro1_1388563770319moiLt_GIF%2Fhorse1.gif&type=sc960_832_gif">
-    </div>
-
-    <p><b>4번</b></p>
-    <div>
-        <img id="horse4" width=100 height=100 src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140101_166%2Fnitro1_1388563770319moiLt_GIF%2Fhorse1.gif&type=sc960_832_gif">
-    </div>
-
-    <p id="result"></p>
+    
 
 </body>
 </html>

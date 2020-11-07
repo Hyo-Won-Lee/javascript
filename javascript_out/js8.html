@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      table{
+          border-collapse:collapse;
+      }
+    </style>
+    
+    <script>
+      var str="";
+      var color="";
+      var widthSize=50,heightSize=21;
+      var colIndexH1=0,colIndexH2=6; var colIndexH3=[0,1,2,3,4,5,6]; //H index
+      var colIndexE1=9; var colIndexE2=[9,10,11,12,13,14];  //E index
+      var colIndex1L1=17; var colIndex1L2=[17,18,19,20,21,22];  //첫 번째 L index
+      var colIndex2L1=25; var colIndex2L2=[25,26,27,28,29,30];  //두 번째 L index
+      var colIndexO1=33,colIndexO3=40; var colIndexO2=[34,35,36,37,38,39]; //O index 
+
+      str+="<table border='1' width='900' height='400'>";
+      for(var i=0;i<heightSize;i++){
+        str+="<tr>";
+        for(var j=0;j<widthSize;j++){
+          str+="<td id='x"+i+"y"+j+"' bgcolor ='"+color+"' width='"+15+"' height = '"+15+"'></td>";
+        }
+        str+="</tr>";
+        document.write("<br>");
+      }
+        str+="</table>";
+        document.write(str);
+      
+      //----'H'출력----//
+      function shapeH(){ 
+        for(var i=0;i<heightSize;i++)
+          document.getElementById("x"+i+"y"+colIndexH1).bgColor="blue";
+        for(var i=0;i<heightSize;i++)
+          document.getElementById("x"+i+"y"+colIndexH2).bgColor="blue";
+        for(var i=0;i<6;i++)
+          document.getElementById("x"+10+"y"+colIndexH3[i]).bgColor="blue";
+      }
+      
+      //----'E'출력----//
+      function shapeE(){
+        for(var i=0;i<heightSize;i++)
+          document.getElementById("x"+i+"y"+colIndexE1).bgColor="blue";
+        for(var i=0;i<6;i++){
+          document.getElementById("x"+0+"y"+colIndexE2[i]).bgColor="blue";
+          document.getElementById("x"+10+"y"+colIndexE2[i]).bgColor="blue";
+          document.getElementById("x"+20+"y"+colIndexE2[i]).bgColor="blue";
+        }
+      }
+
+      //----'1L'출력----//
+      function shape1L(){
+        for(var i=0;i<heightSize;i++)
+          document.getElementById("x"+i+"y"+colIndex1L1).bgColor="blue";
+        for(var i=0;i<6;i++)
+          document.getElementById("x"+20+"y"+colIndex1L2[i]).bgColor="blue";
+      }
+
+      //----'2L'출력----//
+      function shape2L(){
+        for(var i=0;i<heightSize;i++)
+          document.getElementById("x"+i+"y"+colIndex2L1).bgColor="blue";
+        for(var i=0;i<6;i++)
+          document.getElementById("x"+20+"y"+colIndex2L2[i]).bgColor="blue";
+      }
+
+      //----'O'출력----//
+      function shapeO(){
+        for(var i=1;i<heightSize-1;i++)
+          document.getElementById("x"+i+"y"+colIndexO1).bgColor="blue";
+        for(var i=1;i<heightSize-1;i++)
+          document.getElementById("x"+i+"y"+colIndexO3).bgColor="blue";
+        for(var i=0;i<6;i++)
+          document.getElementById("x"+0+"y"+colIndexO2[i]).bgColor="blue";
+        for(var i=0;i<6;i++)
+          document.getElementById("x"+20+"y"+colIndexO2[i]).bgColor="blue";
+      }
+
+      //전체 화면 지우기
+      function del(){
+        for(var i=0;i<heightSize;i++){
+          for(var j=0;j<widthSize;j++){
+            document.getElementById("x"+i+"y"+j).bgColor="white";
+          }
+        }
+      }
+
+      var totalMove=function(){
+        //----'H'제어----//
+        colIndexH1++; colIndexH2++; 
+        for(var i=0;i<6;i++){
+          colIndexH3[i]++;
+          (colIndexH3[i]==widthSize)?colIndexH3[i]=(colIndexH3[i]%widthSize):colIndexH3[i];
+        }
+        (colIndexH1==widthSize)?colIndexH1=(colIndexH1%widthSize):colIndexH1;
+        (colIndexH2==widthSize)?colIndexH2=(colIndexH2%widthSize):colIndexH2;
+        
+        //----'E'제어----//
+        colIndexE1++;
+        for(var i=0;i<6;i++){
+          colIndexE2[i]++;
+          (colIndexE2[i]==widthSize)?colIndexE2[i]=(colIndexE2[i]%widthSize):colIndexE2[i];
+        }
+        (colIndexE1==widthSize)?colIndexE1=(colIndexE1%widthSize):colIndexE1;
+
+        //----'1L'제어----//
+        colIndex1L1++; 
+        for(var i=0;i<6;i++){
+          colIndex1L2[i]++;
+          (colIndex1L2[i]==widthSize)?colIndex1L2[i]=(colIndex1L2[i]%widthSize):colIndex1L2[i];
+        }
+        (colIndex1L1==widthSize)?colIndex1L1=(colIndex1L1%widthSize):colIndex1L1;
+
+        //----'2L'제어----//
+        colIndex2L1++; 
+        for(var i=0;i<6;i++){
+          colIndex2L2[i]++;
+          (colIndex2L2[i]==widthSize)?colIndex2L2[i]=(colIndex2L2[i]%widthSize):colIndex2L2[i];
+        }
+        (colIndex2L1==widthSize)?colIndex2L1=(colIndex2L1%widthSize):colIndex2L1;
+
+        //----'O'제어----//
+        colIndexO1++; colIndexO3++;
+        for(var i=0;i<6;i++){
+          colIndexO2[i]++;
+          (colIndexO2[i]==widthSize)?colIndexO2[i]=(colIndexO2[i]%widthSize):colIndexO2[i];
+        }
+        (colIndexO1==widthSize)?colIndexO1=(colIndexO1%widthSize):colIndexO1;
+        (colIndexO3==widthSize)?colIndexO3=(colIndexO3%widthSize):colIndexO3;
+
+        del();
+        shapeH();    
+        shapeE();
+        shape1L();
+        shape2L();
+        shapeO();
+      }
+
+      setInterval(totalMove,300);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

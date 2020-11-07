@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a=10;//전역변수
+        c=11;//var안 붙이면 전역변수
+        if(true){
+            var b=12;//자바에서는 블록기반이라 지역변수지만 js에서는 함수 기반이라 전역변수.
+        }
+        function f1(){
+            var a1=13;
+            c1=14;//전역변수
+            if(true){
+                var b1=15;
+                //let b1=15; 
+            }
+            alert(b1);
+        }
+        f1();
+        alert(c1);
+        // console.log(a);
+        // console.log(b);
+        // console.log(a1);
+        // console.log(b1);
+        // console.log(c);
+        // console.log(c1);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //전광판 하나씩 이동하기
+            var str="";
+            var color="";
+            var k=0,m=1,count=0;
+
+            var arr=new Array(20);
+            for(var i=0;i<arr.length;i++){
+                arr[i]=new Array(50);
+            }
+
+            str+="<table border='1' width='90%' height='400'>";
+            for(var i=0;i<arr.length;i++){
+                str+="<tr>";
+                for(var j=0;j<arr[i].length;j++){
+                    str+="<td id='"+'x'+i+'y'+j+"' "+"bgColor='"+color+"'>"+"</td>";
+                }
+                str+="</tr>";
+                document.write("<br>");
+            }
+            str+="</table>";
+            document.write(str);
+
+            var i=0;
+            var signBoard=function(){
+                        var on=function(){
+                            for(var j=k;j<m;j++){
+                                document.getElementById('x'+i+'y'+(j-2)).bgColor="blue";
+                            }
+                        }
+                        setTimeout(on,400); 
+            
+                        var off=function(){
+                            for(var j=k;j<m;j++){
+                                document.getElementById('x'+i+'y'+(j-2)).bgColor="";
+                            }
+                        }
+                        m++;
+                        k++;
+                        setTimeout(off,200);  
+                        if(k/52==1){ 
+                            i++;
+                            k=0;
+                            m=1;
+                        } 
+            }
+            setInterval(signBoard,300);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
